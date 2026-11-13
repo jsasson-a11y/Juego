@@ -164,7 +164,7 @@ def find_match(players, name, aliases, source=None, goals=None):
     # Error de tipeo en nombre completo largo.
     k = norm(name)
     if len(k) >= 8:
-        fuzzy = [p for p in players if any(lev(k, pk) <= 1 for pk in p.keys())]
+        fuzzy = [p for p in players if any(lev(k, pk) <= 1 for pk in p.keys()) and plausible(p, 2)]
         if len(fuzzy) == 1:
             return fuzzy[0], 'fuzzy'
         if len(fuzzy) > 1:
