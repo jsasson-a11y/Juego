@@ -80,7 +80,7 @@ class Player:
 NICK = [
     ('robert', 'bobby', 'bob', 'rob'), ('james', 'jimmy', 'jim'), ('nathaniel', 'nat'), ('stephen', 'steve', 'steven'),
     ('geoffrey', 'geoff'), ('ronald', 'ron', 'ronnie'), ('william', 'bill', 'billy', 'willie'), ('john', 'jack', 'johnny'),
-    ('henry', 'harry'), ('edward', 'ted', 'eddie', 'ed'), ('thomas', 'tom', 'tommy'), ('richard', 'dick'),
+    ('henry', 'harry'), ('edward', 'ted', 'teddy', 'eddie', 'ed'), ('thomas', 'tom', 'tommy'), ('richard', 'dick'),
     ('luigi', 'gigi'), ('alessandro', 'sandro'), ('josep', 'pep'), ('jose', 'pepe'), ('ignacio', 'nacho'), ('daniel', 'dani'),
     ('santiago', 'santi'), ('joseph', 'jef', 'jos', 'joe'), ('leopold', 'pol'), ('vincenzo', 'enzo'), ('maximiliano', 'maxi'),
     ('francisco', 'paco', 'pancho', 'fran'), ('johannes', 'hannes', 'hans'), ('alexander', 'alex', 'sasha'), ('gustavo', 'gus'),
@@ -101,7 +101,8 @@ def first_compatible(a, b):
 
 
 def surname_match(players, name, goals):
-    """Último recurso: mismo apellido y nombre de pila compatible (apodo, abreviatura) o mismos goles."""
+    """Último recurso: mismo apellido y (nombre de pila compatible, o goles casi iguales (diferencia <= 2) con la misma inicial o un nombre de una sola palabra).
+    Solo si hay un único candidato entre los jugadores que esta fuente todavía no tiene."""
     tk = tokens(name)
     if not tk:
         return None
@@ -111,10 +112,10 @@ def surname_match(players, name, goals):
             pt = tokens(n)
             if not pt or pt[-1] != tk[-1]:
                 continue
-            same_goals = goals is not None and goals > 0 and goals in p.values.values()
-            single = len(pt) == 1 or len(tk) == 1
-            if (len(pt) > 1 and len(tk) > 1 and first_compatible(pt[0], tk[0])) or (single and same_goals) \
-                    or (same_goals and pt[0][:1] == tk[0][:1]):
+            close = goals is not None and goals > 0 and any(v > 0 and abs(v - goals) <= 2 for v in p.values.values())
+            both_full = len(pt) > 1 and len(tk) > 1
+            same_initial = pt[0][:1] == tk[0][:1]
+            if (both_full and first_compatible(pt[0], tk[0])) or (close and (not both_full or same_initial)):
                 cands.append(p)
                 break
     cands = list(dict.fromkeys(cands))
@@ -136,11 +137,20 @@ def find_match(players, name, aliases, source=None, goals=None):
         return None, 'ambiguo'
     # Subconjunto de tokens con el mismo apellido (ej: "Luis Suárez" ⊂ "Luis Alberto Suárez Díaz").
     cand_sets = [set(tokens(n)) for n in [name, *aliases] if tokens(n)]
+
+    def plausible(p, shared):
+        # Evita unir personas distintas que comparten dos palabras (ej: "Antônio Carlos" vs "Antonio Carlos Cerezo"):
+        # con solo 2 palabras en común, los goles deben ser parecidos.
+        if shared >= 3 or goals is None:
+            return True
+        vals = list(p.values.values())
+        return any(abs(v - goals) <= max(3, 0.25 * max(v, goals)) for v in vals)
+
     sub = []
     for p in players:
         for a in p.token_sets():
             for b in cand_sets:
-                if len(a) >= 2 and len(b) >= 2 and (a <= b or b <= a):
+                if len(a) >= 2 and len(b) >= 2 and (a <= b or b <= a) and plausible(p, min(len(a), len(b))):
                     sub.append(p)
                     break
             else:
@@ -165,6 +175,12 @@ def find_match(players, name, aliases, source=None, goals=None):
     return None, 'nuevo'
 
 
+def clean_display(name):
+    """Quita marcas como "(II)" o "IIº" (hermanos/homónimos numerados) y espacios sobrantes."""
+    name = re.sub(r'\(\s*[IVX]+\s*\)|\b[IVX]+º|\(detto [^)]*\)', ' ', str(name or ''))
+    return re.sub(r'\s+', ' ', name).strip()
+
+
 def load_sources():
     files = sorted(SRC_DIR.glob('*.csv'), key=lambda p: (p.stem != 'wikipedia', p.stem))
     only = next((a.split('=', 1)[1].split(',') for a in sys.argv if a.startswith('--only=')), None)
@@ -185,7 +201,7 @@ def main():
     for source, rows in load_sources():
         for r in rows:
             tid = (r.get('equipo_id') or '').strip()
-            name = (r.get('jugador') or '').strip()
+            name = clean_display(r.get('jugador'))
             try:
                 goals = int(str(r.get('goles', '')).strip())
             except ValueError:

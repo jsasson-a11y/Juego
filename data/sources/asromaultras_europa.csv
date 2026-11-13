@@ -1,0 +1,462 @@
+equipo_id;jugador;goles;alias;fuente;fecha_dato;nota
+roma;Francesco Totti;307;Totti Francesco;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 786 partidos, consultado 2026-11-13
+roma;Roberto Pruzzo;138;Pruzzo Roberto;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 315 partidos, consultado 2026-11-13
+roma;Pedro Waldemar Manfredini;131;Manfredini Pedro Waldemar;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 174 partidos, consultado 2026-11-13
+roma;Edin Džeko;119;Džeko Edin;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 260 partidos, consultado 2026-11-13
+roma;Amedeo Amadei;112;Amadei Amedeo;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 234 partidos, suma de 2 etapas (10 (2) + 224 (110)), consultado 2026-11-13
+roma;Rodolfo Volk;104;Volk Rodolfo;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 161 partidos, consultado 2026-11-13
+roma;Vincenzo Montella;101;Montella Vincenzo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 257 partidos, suma de 2 etapas (242 (101) + 15 (0)), se ignoran 16 partidos como entrenador, consultado 2026-11-13
+roma;Abel Eduardo Balbo;86;Balbo Abel Eduardo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 182 partidos, suma de 2 etapas (167 (86) + 15 (0)), consultado 2026-11-13
+roma;Marco Delvecchio;83;Delvecchio Marco;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 301 partidos, consultado 2026-11-13
+roma;Dino Da Costa;79;Da Costa Dino;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 162 partidos, suma de 2 etapas (156 (78) + 6 (1)), consultado 2026-11-13
+roma;Giuseppe Giannini;75;Giannini Giuseppe;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 437 partidos, consultado 2026-11-13
+roma;Agostino Di Bartolomei;68;Di Bartolomei Agostino;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 309 partidos, suma de 2 etapas (30 (1) + 279 (67)), consultado 2026-11-13
+roma;Augusto Fasanelli Cesare;68;Fasanelli Cesare Augusto;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 183 partidos, consultado 2026-11-13
+roma;Rudolf Völler;68;Völler Rudolf;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 198 partidos, se ignoran 5 partidos como entrenador, consultado 2026-11-13
+roma;Stephan El Shaarawy;65;El Shaarawy Stephan;https://www.asromaultras.org/E_Uomini.html;;todas las competiciones oficiales, 348 partidos, suma de 2 etapas (139 (40) + 209 (25)), consultado 2026-11-13
+roma;Mirko Vučinić;64;Vučinić Mirko;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 203 partidos, consultado 2026-11-13
+roma;Daniele De Rossi;63;De Rossi Daniele;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 616 partidos, se ignoran 30 partidos como entrenador, consultado 2026-11-13
+roma;Lorenzo Pellegrini;62;Pellegrini Lorenzo;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 349 partidos, suma de 2 etapas (1 (0) + 348 (62)), '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Amantino Alessandro Mancini Faiolhe;59;Mancini Faiolhe Amantino Alessandro;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 222 partidos, consultado 2026-11-13
+roma;G. Carlo Galli;56;Galli G. Carlo;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 125 partidos, consultado 2026-11-13
+roma;Ruggiero Rizzitelli;55;Rizzitelli Ruggiero;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 211 partidos, consultado 2026-11-13
+roma;Antonio Cassano;52;Cassano Antonio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 161 partidos, consultado 2026-11-13
+roma;Fulvio Bernardini;49;Bernardini Fulvio;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 286 partidos, se ignoran 35 partidos como entrenador, consultado 2026-11-13
+roma;Angel Pantò Miguel;48;Pantò Miguel Angel;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 155 partidos, consultado 2026-11-13
+roma;Simone Perrotta;48;Perrotta Simone;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 327 partidos, consultado 2026-11-13
+roma;Bruno Conti;47;Conti Bruno;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 402 partidos, suma de 3 etapas (4 (0) + 53 (4) + 345 (43)), se ignoran 15 partidos como entrenador, consultado 2026-11-13
+roma;Paulo Dybala;45;Dybala Paulo;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 140 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Alberto Orlando;44;Orlando Alberto;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 187 partidos, suma de 2 etapas (7 (2) + 180 (42)), consultado 2026-11-13
+roma;Enrique Guaita;43;Guaita Enrique;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 63 partidos, consultado 2026-11-13
+roma;Pierino Prati;41;Prati Pierino;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 108 partidos, consultado 2026-11-13
+roma;Raffaele Costantino;40;Costantino Raffaele;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 161 partidos, consultado 2026-11-13
+roma;Valentin Angelillo Antonio;39;Angelillo Antonio Valentin;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 152 partidos, consultado 2026-11-13
+roma;Tammy Abraham;37;Abraham Tammy;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 112 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Ramón Lojacono Francisco;35;Lojacono Francisco Ramón;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 73 partidos, consultado 2026-11-13
+roma;Mohamed Salah;34;Salah Mohamed;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 83 partidos, consultado 2026-11-13
+roma;Gabriel Omar Batistuta;33;Batistuta Gabriel Omar;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 87 partidos, consultado 2026-11-13
+roma;Radja Nainggolan;33;Nainggolan Radja;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 203 partidos, consultado 2026-11-13
+roma;(II) Cappellini Renato;32;Cappellini Renato (II);https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 137 partidos, consultado 2026-11-13
+roma;Stefano Desideri;32;Desideri Stefano;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 190 partidos, consultado 2026-11-13
+roma;Naim Krieziu;32;Krieziu Naim;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 135 partidos, se ignoran 6 partidos como entrenador, consultado 2026-11-13
+roma;Luca Peirò Joaquin;32;Peirò Joaquin Luca;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 136 partidos, consultado 2026-11-13
+roma;Diego Perotti;32;Perotti Diego;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 138 partidos, consultado 2026-11-13
+roma;Bengt Selmosson Arne;32;Selmosson Arne Bengt;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 103 partidos, consultado 2026-11-13
+roma;Danilo Michelini;31;Michelini Danilo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 61 partidos, consultado 2026-11-13
+roma;(II) Christian Panucci;31;Panucci (II) Christian;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 315 partidos, consultado 2026-11-13
+roma;Rodrigo Taddei;31;Taddei Rodrigo;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 296 partidos, consultado 2026-11-13
+roma;Giancarlo De Sisti;30;De Sisti Giancarlo;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 292 partidos, suma de 2 etapas (125 (21) + 167 (9)), consultado 2026-11-13
+roma;Miralem Pjanic;30;Pjanic Miralem;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 185 partidos, consultado 2026-11-13
+roma;Mattia Destro;29;Destro Mattia;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 68 partidos, consultado 2026-11-13
+roma;Henrikh Mkhitaryan;29;Mkhitaryan Henrikh;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 117 partidos, consultado 2026-11-13
+roma;Egisto Pandolfini;29;Pandolfini Egisto;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 110 partidos, consultado 2026-11-13
+roma;Alessandro Florenzi;28;Florenzi Alessandro;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 279 partidos, suma de 2 etapas (1 (0) + 278 (28)), consultado 2026-11-13
+roma;Garis Fonseca Daniel;28;Fonseca Daniel Garis;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 79 partidos, consultado 2026-11-13
+roma;Pablo Daniel Osvaldo;28;Osvaldo Pablo Daniel;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 57 partidos, consultado 2026-11-13
+roma;Mario Tontodonati;28;Tontodonati Mario;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 90 partidos, consultado 2026-11-13
+roma;Aristide Coscia;27;Coscia Aristide;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 153 partidos, consultado 2026-11-13
+roma;Paulo Roberto Falcão;27;Falcão Paulo Roberto;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 152 partidos, consultado 2026-11-13
+roma;Torbjörn Jonsson;27;Jonsson Torbjörn;https://www.asromaultras.org/J_Uomini.html;;todas las competiciones oficiales, 65 partidos, consultado 2026-11-13
+roma;Ermes Borsetti;26;Borsetti Ermes;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 98 partidos, suma de 2 etapas (52 (17) + 46 (9)), consultado 2026-11-13
+roma;Gervinho Gervais Yao Kouassi,;26;Gervais Yao Kouassi, Gervinho;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 88 partidos, consultado 2026-11-13
+roma;Alejandro Scopelli;26;Scopelli Alejandro;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 65 partidos, consultado 2026-11-13
+roma;Andrea Carnevale;25;Carnevale Andrea;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 73 partidos, consultado 2026-11-13
+roma;Carlos Cerezo Antonio;25;Cerezo Antonio Carlos;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 104 partidos, consultado 2026-11-13
+roma;Silvestre do Nascimiento Paulo Sérgio;25;Paulo Sérgio Silvestre do Nascimiento;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 77 partidos, consultado 2026-11-13
+roma;Paolo Pestrin;25;Pestrin Paolo;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 234 partidos, consultado 2026-11-13
+roma;Severino Lojodice;24;Lojodice Severino;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 97 partidos, consultado 2026-11-13
+roma;Otello Subinaghi;24;Subinaghi Otello;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 81 partidos, consultado 2026-11-13
+roma;Nicolò Zaniolo;24;Zaniolo Nicolò;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 128 partidos, consultado 2026-11-13
+roma;Kazimierz Boniek Zbigniew;23;Boniek Zbigniew Kazimierz;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 92 partidos, consultado 2026-11-13
+roma;Gianluca Mancini;23;Mancini Gianluca;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 319 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Paolo Barison;22;Barison Paolo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 69 partidos, consultado 2026-11-13
+roma;(I) Stefano Nyers;22;Nyers (I) Stefano;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 56 partidos, consultado 2026-11-13
+roma;Giuliano Taccola;22;Taccola Giuliano;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 50 partidos, consultado 2026-11-13
+roma;Jordan Veretout;22;Veretout Jordan;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 131 partidos, consultado 2026-11-13
+roma;Adriano Zecca;22;Zecca Adriano;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 90 partidos, consultado 2026-11-13
+roma;Santos Aldair Nascimento do;21;Aldair Nascimento do Santos;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 436 partidos, consultado 2026-11-13
+roma;Rosa Emerson Ferreira da;21;Emerson Ferreira da Rosa;https://www.asromaultras.org/E_Uomini.html;;todas las competiciones oficiales, 144 partidos, consultado 2026-11-13
+roma;Erik Lamela;21;Lamela Erik;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 67 partidos, consultado 2026-11-13
+roma;Romelu Lukaku;21;Lukaku Romelu;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 47 partidos, consultado 2026-11-13
+roma;Damiano Tommasi;21;Tommasi Damiano;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 351 partidos, consultado 2026-11-13
+roma;Bryan Cristante;20;Cristante Bryan;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 364 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Artem Dovbyk;20;Dovbyk Artem;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 63 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Francesco Graziani;20;Graziani Francesco;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 96 partidos, consultado 2026-11-13
+roma;Giampaolo Menichelli;20;Menichelli Giampaolo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 101 partidos, suma de 2 etapas (2 (0) + 99 (20)), consultado 2026-11-13
+roma;Bruno Pesaola;20;Pesaola Bruno;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 90 partidos, consultado 2026-11-13
+roma;Stig Sundqvist;20;Sundqvist Stig;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 77 partidos, consultado 2026-11-13
+roma;Massimiliano Cappioli;19;Cappioli Massimiliano;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 110 partidos, consultado 2026-11-13
+roma;Franco Cordova;19;Cordova Franco;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 281 partidos, consultado 2026-11-13
+roma;Dante Di Benedetti;19;Di Benedetti Dante;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 39 partidos, consultado 2026-11-13
+roma;Aleksandar Kolarov;19;Kolarov Aleksandar;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 132 partidos, consultado 2026-11-13
+roma;Sebastiano Nela;19;Nela Sebastiano;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 397 partidos, consultado 2026-11-13
+roma;Carlo Ancelotti;18;Ancelotti Carlo;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 227 partidos, consultado 2026-11-13
+roma;Lorenzo Bettini;18;Bettini Lorenzo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 40 partidos, suma de 2 etapas (25 (9) + 15 (9)), consultado 2026-11-13
+roma;Marco Borriello;18;Borriello Marco;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 65 partidos, suma de 2 etapas (65 (18) + 0 (0)), consultado 2026-11-13
+roma;Fabio Capello;18;Capello Fabio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 90 partidos, se ignoran 241 partidos como entrenador, consultado 2026-11-13
+roma;Biagio Luigi Di;18;Di Biagio Luigi;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 140 partidos, consultado 2026-11-13
+roma;Fernando Eusebio;18;Eusebio Fernando;https://www.asromaultras.org/E_Uomini.html;;todas las competiciones oficiales, 58 partidos, consultado 2026-11-13
+roma;Edgardo Ghiggia Alcide;18;Ghiggia Alcide Edgardo;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 212 partidos, consultado 2026-11-13
+roma;Borja Mayoral Moya;18;Mayoral Moya Borja;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 56 partidos, consultado 2026-11-13
+roma;David Marcelo Pizarro;18;Pizarro David Marcelo;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 207 partidos, consultado 2026-11-13
+roma;Valerio Spadoni;18;Spadoni Valerio;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 108 partidos, consultado 2026-11-13
+roma;Arcadio Venturi;18;Venturi Arcadio;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 289 partidos, consultado 2026-11-13
+roma;Cengiz Ünder;17;Ünder Cengiz;https://www.asromaultras.org/U_Uomini.html;;todas las competiciones oficiales, 88 partidos, consultado 2026-11-13
+roma;Vincent Candela;16;Candela Vincent;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 289 partidos, consultado 2026-11-13
+roma;Eusebio Di Francesco;16;Di Francesco Eusebio;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 129 partidos, se ignoran 87 partidos como entrenador, consultado 2026-11-13
+roma;Philippe Mexes;16;Mexes Philippe;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 267 partidos, consultado 2026-11-13
+roma;Ernesto Tomasi;16;Tomasi Ernesto;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 116 partidos, consultado 2026-11-13
+roma;Alberto Aquilani;15;Aquilani Alberto;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 147 partidos, suma de 2 etapas (2 (0) + 145 (15)), consultado 2026-11-13
+roma;Julio Cesar Baptista;15;Baptista Julio Cesar;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 77 partidos, consultado 2026-11-13
+roma;Adem Ljajic;15;Ljajic Adem;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 74 partidos, consultado 2026-11-13
+roma;Omero Losi;15;Losi Omero;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 77 partidos, consultado 2026-11-13
+roma;Donyell Malen;15;Malen Donyell;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 20 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Renzo Merlin;15;Merlin Renzo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 68 partidos, consultado 2026-11-13
+roma;Gunnar Nordahl (III);15;Nordahl (III) Gunnar;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 34 partidos, se ignoran 50 partidos como entrenador, consultado 2026-11-13
+roma;Federico Fazio;14;Fazio Federico;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 169 partidos, consultado 2026-11-13
+roma;Thomas Haessler;14;Haessler Thomas;https://www.asromaultras.org/H_Uomini.html;;todas las competiciones oficiales, 118 partidos, consultado 2026-11-13
+roma;Lamberto Leonardi;14;Leonardi Lamberto;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 110 partidos, suma de 2 etapas (6 (0) + 104 (14)), consultado 2026-11-13
+roma;Giovanni Perissinotto;14;Perissinotto Giovanni;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 61 partidos, consultado 2026-11-13
+roma;Gianfranco Zigoni;14;Zigoni Gianfranco;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 64 partidos, consultado 2026-11-13
+roma;Luciano Alghisi;13;Alghisi Luciano;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 57 partidos, consultado 2026-11-13
+roma;Matteo Brighi;13;Brighi Matteo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 141 partidos, consultado 2026-11-13
+roma;Cristian Chivu;13;Chivu Cristian;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 124 partidos, consultado 2026-11-13
+roma;Stefano Ferrari;13;Ferrari Stefano;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 47 partidos, consultado 2026-11-13
+roma;Giuliano Musiello (II);13;Musiello (II) Giuliano;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 62 partidos, consultado 2026-11-13
+roma;Leandro Paredes;13;Paredes Leandro;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 135 partidos, suma de 3 etapas (13 (1) + 41 (3) + 81 (9)), consultado 2026-11-13
+roma;Eldor Shomurodov;13;Shomurodov Eldor;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 85 partidos, suma de 2 etapas (48 (6) + 37 (7)), '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Kevin Strootman;13;Strootman Kevin;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 131 partidos, consultado 2026-11-13
+roma;Sune Andersson;12;Andersson Sune;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 59 partidos, consultado 2026-11-13
+roma;Christian Bronée Helge;12;Bronée Helge Christian;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 51 partidos, consultado 2026-11-13
+roma;Fabio Enzo;12;Enzo Fabio;https://www.asromaultras.org/E_Uomini.html;;todas las competiciones oficiales, 48 partidos, suma de 2 etapas (42 (10) + 6 (2)), consultado 2026-11-13
+roma;Fulvio Francesconi;12;Francesconi Fulvio;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 73 partidos, consultado 2026-11-13
+roma;Maurizio Iorio;12;Iorio Maurizio;https://www.asromaultras.org/I_Uomini.html;;todas las competiciones oficiales, 64 partidos, suma de 2 etapas (40 (9) + 24 (3)), consultado 2026-11-13
+roma;Jeremy Menez;12;Menez Jeremy;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 114 partidos, consultado 2026-11-13
+roma;Roberto Muzzi;12;Muzzi Roberto;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 83 partidos, consultado 2026-11-13
+roma;Elvio Salvori;12;Salvori Elvio;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 228 partidos, suma de 2 etapas (31 (1) + 197 (11)), consultado 2026-11-13
+roma;Francesco Scaratti;12;Scaratti Francesco;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 163 partidos, suma de 2 etapas (1 (0) + 162 (12)), consultado 2026-11-13
+roma;Jurgen Schutz;12;Schutz Jurgen;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 31 partidos, suma de 2 etapas (24 (10) + 7 (2)), consultado 2026-11-13
+roma;Guido Ugolotti;12;Ugolotti Guido;https://www.asromaultras.org/U_Uomini.html;;todas las competiciones oficiales, 51 partidos, suma de 2 etapas (47 (12) + 4 (0)), consultado 2026-11-13
+roma;Silveira Amarildo Tavares de;11;Amarildo Tavares de Silveira;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 40 partidos, consultado 2026-11-13
+roma;Aleksandar Arangelovich;11;Arangelovich Aleksandar;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 20 partidos, consultado 2026-11-13
+roma;Oreste Benatti;11;Benatti Oreste;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 60 partidos, consultado 2026-11-13
+roma;Mario Bussich;11;Bussich Mario;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 35 partidos, consultado 2026-11-13
+roma;Carmine Gautieri;11;Gautieri Carmine;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 53 partidos, consultado 2026-11-13
+roma;Luigi Giuliano;11;Giuliano Luigi;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 163 partidos, consultado 2026-11-13
+roma;Santos Juan Silveira dos;11;Juan Silveira dos Santos;https://www.asromaultras.org/J_Uomini.html;;todas las competiciones oficiales, 149 partidos, consultado 2026-11-13
+roma;Francesco Moriero;11;Moriero Francesco;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 89 partidos, consultado 2026-11-13
+roma;John Arne Riise;11;Riise John Arne;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 136 partidos, consultado 2026-11-13
+roma;Walter Adrian Samuel;11;Samuel Walter Adrian;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 173 partidos, consultado 2026-11-13
+roma;Franco Scaramelli;11;Scaramelli Franco;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 104 partidos, consultado 2026-11-13
+roma;Matías Soulé;11;Soulé Matías;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 81 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Sandro Tovalieri;11;Tovalieri Sandro;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 33 partidos, consultado 2026-11-13
+roma;Sergio Andreoli;10;Andreoli Sergio;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 207 partidos, consultado 2026-11-13
+roma;Marcos dos Santos Assunção;10;Assunção Marcos dos Santos;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 83 partidos, consultado 2026-11-13
+roma;Carlo Bacci Gian;10;Bacci Gian Carlo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 42 partidos, consultado 2026-11-13
+roma;Andrea Belotti;10;Belotti Andrea;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 68 partidos, consultado 2026-11-13
+roma;Fabio Borini;10;Borini Fabio;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 26 partidos, consultado 2026-11-13
+roma;Raoul Bortoletto;10;Bortoletto Raoul;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 133 partidos, consultado 2026-11-13
+roma;Odoacre Chierico;10;Chierico Odoacre;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 119 partidos, consultado 2026-11-13
+roma;Domenico D'Alberto;10;D'Alberto Domenico;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 44 partidos, consultado 2026-11-13
+roma;Stefano Pellegrini (II);10;Pellegrini (II) Stefano;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 58 partidos, consultado 2026-11-13
+roma;Christopher Lloyd Smalling;10;Smalling Christopher Lloyd;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 155 partidos, consultado 2026-11-13
+roma;Claudio Paul Caniggia;9;Caniggia Claudio Paul;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Mauro Fabrizio Di;9;Di Mauro Fabrizio;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 132 partidos, consultado 2026-11-13
+roma;Manuel Gerolin;9;Gerolin Manuel;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 194 partidos, consultado 2026-11-13
+roma;Roger Ibañez;9;Ibañez Roger;https://www.asromaultras.org/I_Uomini.html;;todas las competiciones oficiales, 149 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Justin Kluivert;9;Kluivert Justin;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 68 partidos, consultado 2026-11-13
+roma;Sergio Santarini;9;Santarini Sergio;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 446 partidos, consultado 2026-11-13
+roma;Henrique Simplicio Fábio;9;Simplicio Fábio Henrique;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 53 partidos, consultado 2026-11-13
+roma;Franco Zaglio;9;Zaglio Franco;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 67 partidos, consultado 2026-11-13
+roma;Massimo Agostini;8;Agostini Massimo;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 52 partidos, consultado 2026-11-13
+roma;Marcos Evangelista de Moraes Cafu;8;Cafu Marcos Evangelista de Moraes;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 218 partidos, consultado 2026-11-13
+roma;John Alieu Carew;8;Carew John Alieu;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 29 partidos, consultado 2026-11-13
+roma;Mario Forlivesi;8;Forlivesi Mario;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 7 partidos, consultado 2026-11-13
+roma;Ludovic Giuly;8;Giuly Ludovic;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 48 partidos, consultado 2026-11-13
+roma;Fausto Landini (II);8;Landini (II) Fausto;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 65 partidos, consultado 2026-11-13
+roma;Aldo Maldera (III);8;Maldera (III) Aldo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 117 partidos, consultado 2026-11-13
+roma;Kostantinos Manolas;8;Manolas Kostantinos;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 206 partidos, consultado 2026-11-13
+roma;Oliviero Mascheroni;8;Mascheroni Oliviero;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 39 partidos, consultado 2026-11-13
+roma;Giorgio Morini;8;Morini Giorgio;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 135 partidos, consultado 2026-11-13
+roma;Piergiorgio Negrisolo;8;Negrisolo Piergiorgio;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 94 partidos, consultado 2026-11-13
+roma;Carles Pérez;8;Pérez Carles;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 75 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Carlo Petrini;8;Petrini Carlo;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 33 partidos, consultado 2026-11-13
+roma;Niccolò Pisilli;8;Pisilli Niccolò;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 78 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Patrick Schick;8;Schick Patrick;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 58 partidos, consultado 2026-11-13
+roma;Pietro Serantoni;8;Serantoni Pietro;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 85 partidos, se ignoran 18 partidos como entrenador, consultado 2026-11-13
+roma;Benedetto Sormani Angelo;8;Sormani Angelo Benedetto;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 30 partidos, se ignoran 2 partidos como entrenador, consultado 2026-11-13
+roma;Giuseppe Tamborini;8;Tamborini Giuseppe;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 109 partidos, consultado 2026-11-13
+roma;Dmitrij Alenitčhev;7;Alenitčhev Dmitrij;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 43 partidos, consultado 2026-11-13
+roma;Mario Cappa;7;Cappa Mario;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Renato Cattaneo;7;Cattaneo Renato;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 43 partidos, consultado 2026-11-13
+roma;Carlo Antonio Di;7;Di Carlo Antonio;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 75 partidos, consultado 2026-11-13
+roma;Walter Franzot;7;Franzot Walter;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 107 partidos, consultado 2026-11-13
+roma;Bojan Krkic Pérez;7;Krkic Pérez Bojan;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 37 partidos, consultado 2026-11-13
+roma;Italo Lombardo Nicolas;7;Lombardo Nicolas Italo;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 45 partidos, consultado 2026-11-13
+roma;Antônio de Mattos Filho Marquinho Marco;7;Marquinho Marco Antônio de Mattos Filho;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 55 partidos, consultado 2026-11-13
+roma;Siniša Mihajlović;7;Mihajlović Siniša;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 69 partidos, consultado 2026-11-13
+roma;Shabani Nonda;7;Nonda Shabani;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 22 partidos, consultado 2026-11-13
+roma;Roberto Policano;7;Policano Roberto;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 52 partidos, consultado 2026-11-13
+roma;Alexis Saelemaekers;7;Saelemaekers Alexis;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 31 partidos, consultado 2026-11-13
+roma;Leonardo Spinazzola;7;Spinazzola Leonardo;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 151 partidos, consultado 2026-11-13
+roma;Antonino Tempestilli;7;Tempestilli Antonino;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 162 partidos, consultado 2026-11-13
+roma;Vasilis Torodisis;7;Torodisis Vasilis;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 77 partidos, consultado 2026-11-13
+roma;Omero Urilli;7;Urilli Omero;https://www.asromaultras.org/U_Uomini.html;;todas las competiciones oficiales, 19 partidos, consultado 2026-11-13
+roma;Francesco Vincenzi;7;Vincenzi Francesco;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 23 partidos, consultado 2026-11-13
+roma;Silvano Benedetti;6;Benedetti Silvano;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 73 partidos, consultado 2026-11-13
+roma;Nicolàs Andrés Burdisso;6;Burdisso Nicolàs Andrés;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 131 partidos, consultado 2026-11-13
+roma;Valter Casaroli;6;Casaroli Valter;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 49 partidos, suma de 2 etapas (11 (3) + 38 (3)), consultado 2026-11-13
+roma;Celestino Celio (I);6;Celio (I) Celestino;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 54 partidos, consultado 2026-11-13
+roma;William Charles John;6;Charles John William;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 14 partidos, consultado 2026-11-13
+roma;Aldo Donati;6;Donati Aldo;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 150 partidos, consultado 2026-11-13
+roma;Egidio Guarnacci;6;Guarnacci Egidio;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 158 partidos, consultado 2026-11-13
+roma;Carlo Lucchesi;6;Lucchesi Carlo;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 55 partidos, suma de 2 etapas (34 (3) + 21 (3)), consultado 2026-11-13
+roma;Sisenando Maicon Douglas;6;Maicon Douglas Sisenando;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 69 partidos, consultado 2026-11-13
+roma;Lionello Manfredonia;6;Manfredonia Lionello;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 95 partidos, consultado 2026-11-13
+roma;Lucio Mujesan;6;Mujesan Lucio;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 20 partidos, consultado 2026-11-13
+roma;Hidetoshi Nakata;6;Nakata Hidetoshi;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 40 partidos, consultado 2026-11-13
+roma;Obite Evan N'Dicka;6;N'Dicka Obite Evan;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 127 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Stefano Okaka;6;Okaka Stefano;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 60 partidos, suma de 2 etapas (27 (2) + 33 (4)), consultado 2026-11-13
+roma;Rodrguez Ledesma Pedro;6;Pedro Rodrguez Ledesma;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 40 partidos, consultado 2026-11-13
+roma;Bruno Peres;6;Peres Bruno;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 132 partidos, suma de 2 etapas (69 (2) + 63 (4)), consultado 2026-11-13
+roma;Sergio Petrelli;6;Petrelli Sergio;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 80 partidos, consultado 2026-11-13
+roma;Adelmo Prenna;6;Prenna Adelmo;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 13 partidos, consultado 2026-11-13
+roma;Fausto Salsano;6;Salsano Fausto;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 109 partidos, consultado 2026-11-13
+roma;Ione Spartano;6;Spartano Ione;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 50 partidos, consultado 2026-11-13
+roma;Armando Treré;6;Treré Armando;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 149 partidos, consultado 2026-11-13
+roma;Gyula Zsengeller;6;Zsengeller Gyula;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 34 partidos, consultado 2026-11-13
+roma;Mario Ardizzon;5;Ardizzon Mario;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 120 partidos, consultado 2026-11-13
+roma;El Moutaqui Mehdi Amine Benatia;5;Benatia El Moutaqui Mehdi Amine;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 37 partidos, consultado 2026-11-13
+roma;Klaus Berggreen;5;Berggreen Klaus;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 32 partidos, consultado 2026-11-13
+roma;Thomas Berthold;5;Berthold Thomas;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 87 partidos, consultado 2026-11-13
+roma;Renato Cappellini;5;Cappellini Renato;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 30 partidos, consultado 2026-11-13
+roma;Marco Cassetti;5;Cassetti Marco;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 198 partidos, consultado 2026-11-13
+roma;Arturo Chini Luduena;5;Chini Luduena Arturo;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 163 partidos, consultado 2026-11-13
+roma;Antonio Comi;5;Comi Antonio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 135 partidos, consultado 2026-11-13
+roma;Vittorio Dagianti;5;Dagianti Vittorio;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 49 partidos, consultado 2026-11-13
+roma;Vicente Di Paola;5;Di Paola Vicente;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 78 partidos, consultado 2026-11-13
+roma;Pereira Fabio Junior;5;Fabio Junior Pereira;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 23 partidos, consultado 2026-11-13
+roma;Alberto Faccini Paolo;5;Faccini Paolo Alberto;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 28 partidos, consultado 2026-11-13
+roma;Joe Ferguson Evan;5;Ferguson Evan Joe;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 21 partidos, consultado 2026-11-13
+roma;Mario Hermoso;5;Hermoso Mario;https://www.asromaultras.org/H_Uomini.html;;todas las competiciones oficiales, 47 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Juan Manuel Iturbe;5;Iturbe Juan Manuel;https://www.asromaultras.org/I_Uomini.html;;todas las competiciones oficiales, 68 partidos, suma de 2 etapas (56 (5) + 12 (0)), consultado 2026-11-13
+roma;Nikola Kalinić;5;Kalinić Nikola;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 18 partidos, consultado 2026-11-13
+roma;Giacomo La Rosa;5;La Rosa Giacomo;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 32 partidos, consultado 2026-11-13
+roma;Daniele Massaro;5;Massaro Daniele;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 32 partidos, consultado 2026-11-13
+roma;Alfredo Mazzoni;5;Mazzoni Alfredo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 26 partidos, consultado 2026-11-13
+roma;Angelo Orazi;5;Orazi Angelo;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 65 partidos, suma de 2 etapas (3 (0) + 62 (5)), consultado 2026-11-13
+roma;Herbert Prohaska;5;Prohaska Herbert;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 42 partidos, consultado 2026-11-13
+roma;Francisco Providente;5;Providente Francisco;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 22 partidos, consultado 2026-11-13
+roma;Luciano Spinosi;5;Spinosi Luciano;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 150 partidos, suma de 2 etapas (61 (4) + 89 (1)), se ignoran 4 partidos como entrenador, consultado 2026-11-13
+roma;Luca Toni;5;Toni Luca;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;França Wesley;5;Wesley França;https://www.asromaultras.org/W_Uomini.html;;todas las competiciones oficiales, 39 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Ángel Esmoris Tasende Angeliño José;4;José Ángel Esmoris Tasende Angeliño;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 80 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Houssem Aouar;4;Aouar Houssem;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Paolo Baldieri;4;Baldieri Paolo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 42 partidos, suma de 3 etapas (3 (1) + 23 (3) + 16 (0)), consultado 2026-11-13
+roma;Edoardo Bove;4;Bove Edoardo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 91 partidos, consultado 2026-11-13
+roma;Amedeo Carboni;4;Carboni Amedeo;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 231 partidos, consultado 2026-11-13
+roma;Sergio Carpanesi;4;Carpanesi Sergio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 207 partidos, consultado 2026-11-13
+roma;Armando Cavazzuti;4;Cavazzuti Armando;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 32 partidos, suma de 2 etapas (30 (4) + 2 (0)), consultado 2026-11-13
+roma;Luis Del Sol;4;Del Sol Luis;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 59 partidos, consultado 2026-11-13
+roma;Traianos Dellas;4;Dellas Traianos;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 67 partidos, consultado 2026-11-13
+roma;Luigi Di Pasquale;4;Di Pasquale Luigi;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Angelo Domenghini;4;Domenghini Angelo;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 32 partidos, consultado 2026-11-13
+roma;Evaristo Frisoni;4;Frisoni Evaristo;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 116 partidos, consultado 2026-11-13
+roma;Giovanni Griffith;4;Griffith Giovanni;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 108 partidos, consultado 2026-11-13
+roma;Seydou Keita;4;Keita Seydou;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 59 partidos, consultado 2026-11-13
+roma;Kouadio Koné;4;Koné Kouadio;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 82 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Marash Kumbulla;4;Kumbulla Marash;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 66 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Liborio Liguori;4;Liguori Liborio;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 78 partidos, consultado 2026-11-13
+roma;Tommaso Maestrelli;4;Maestrelli Tommaso;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 95 partidos, consultado 2026-11-13
+roma;Bruno Nicolé;4;Nicolé Bruno;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 22 partidos, consultado 2026-11-13
+roma;Emidio Oddi;4;Oddi Emidio;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 207 partidos, consultado 2026-11-13
+roma;Javier Pastore;4;Pastore Javier;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 37 partidos, consultado 2026-11-13
+roma;Renato Portaluppi;4;Portaluppi Renato;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 33 partidos, consultado 2026-11-13
+roma;Paolo Sirena;4;Sirena Paolo;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 57 partidos, consultado 2026-11-13
+roma;Tullio Strukelj Mark;4;Strukelj Mark Tullio;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 20 partidos, consultado 2026-11-13
+roma;FIlippo Tasso;4;Tasso FIlippo;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 5 partidos, consultado 2026-11-13
+roma;Roberto Vieri;4;Vieri Roberto;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 40 partidos, consultado 2026-11-13
+roma;Luigi Ziroli;4;Ziroli Luigi;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 26 partidos, consultado 2026-11-13
+roma;Sardar Azmoun;3;Azmoun Sardar;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 29 partidos, consultado 2026-11-13
+roma;Tommaso Baldanzi;3;Baldanzi Tommaso;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 68 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Elvio Banchero;3;Banchero Elvio;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 20 partidos, consultado 2026-11-13
+roma;Romeo Benetti;3;Benetti Romeo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 39 partidos, consultado 2026-11-13
+roma;Renato Bodini;3;Bodini Renato;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 143 partidos, consultado 2026-11-13
+roma;Dario Bonetti;3;Bonetti Dario;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 132 partidos, suma de 2 etapas (55 (0) + 77 (3)), consultado 2026-11-13
+roma;Giuseppe Bonomi;3;Bonomi Giuseppe;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 137 partidos, consultado 2026-11-13
+roma;Amos Cardarelli;3;Cardarelli Amos;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 157 partidos, consultado 2026-11-13
+roma;Francesco Carpenetti;3;Carpenetti Francesco;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 160 partidos, consultado 2026-11-13
+roma;Mario Castellazzi;3;Castellazzi Mario;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 9 partidos, consultado 2026-11-13
+roma;Alessio Cerci;3;Cerci Alessio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 23 partidos, suma de 2 etapas (5 (0) + 18 (3)), consultado 2026-11-13
+roma;Cícero João de Cézare Cicinho;3;Cicinho Cícero João de Cézare;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 91 partidos, consultado 2026-11-13
+roma;Giovanni Corbjons;3;Corbjons Giovanni;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 49 partidos, consultado 2026-11-13
+roma;Jair Da Costa;3;Da Costa Jair;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 28 partidos, consultado 2026-11-13
+roma;Ricardo Da Silva José;3;Da Silva José Ricardo;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 13 partidos, consultado 2026-11-13
+roma;Vito D'Amato;3;D'Amato Vito;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 27 partidos, consultado 2026-11-13
+roma;Michele De Nadai;3;De Nadai Michele;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 99 partidos, consultado 2026-11-13
+roma;Mario Degrassi;3;Degrassi Mario;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 45 partidos, consultado 2026-11-13
+roma;Lucas Digne;3;Digne Lucas;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 42 partidos, consultado 2026-11-13
+roma;Bruno Dugoni;3;Dugoni Bruno;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 48 partidos, consultado 2026-11-13
+roma;Iago Falque;3;Falque Iago;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 27 partidos, consultado 2026-11-13
+roma;Piero Ferrari;3;Ferrari Piero;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 14 partidos, consultado 2026-11-13
+roma;Attilio Ferraris IV;3;Ferraris IV Attilio;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 231 partidos, suma de 2 etapas (217 (3) + 14 (0)), consultado 2026-11-13
+roma;Antonio Fusco;3;Fusco Antonio;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 136 partidos, suma de 2 etapas (133 (3) + 3 (0)), consultado 2026-11-13
+roma;Andrea Gadaldi;3;Gadaldi Andrea;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 196 partidos, consultado 2026-11-13
+roma;Bismark Guigou Martinez Gianni;3;Guigou Martinez Gianni Bismark;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 61 partidos, consultado 2026-11-13
+roma;Paolo Jacobini;3;Jacobini Paolo;https://www.asromaultras.org/J_Uomini.html;;todas las competiciones oficiales, 127 partidos, consultado 2026-11-13
+roma;Simone Loria;3;Loria Simone;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 18 partidos, suma de 2 etapas (12 (1) + 6 (2)), consultado 2026-11-13
+roma;Edmondo Mornese;3;Mornese Edmondo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 60 partidos, consultado 2026-11-13
+roma;Sergio Oliveira;3;Oliveira Sergio;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 22 partidos, consultado 2026-11-13
+roma;Luigi Ossoinach;3;Ossoinach Luigi;https://www.asromaultras.org/O_Uomini.html;;todas las competiciones oficiales, 8 partidos, consultado 2026-11-13
+roma;Domenicacci Sergio Pellizzaro;3;Pellizzaro Domenicacci Sergio;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;Armando Preti;3;Preti Armando;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 6 partidos, suma de 2 etapas (5 (3) + 1 (0)), consultado 2026-11-13
+roma;Aleandro Rosi;3;Rosi Aleandro;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 99 partidos, suma de 2 etapas (58 (2) + 41 (1)), consultado 2026-11-13
+roma;Roberto Scarnecchia;3;Scarnecchia Roberto;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 92 partidos, consultado 2026-11-13
+roma;Alberto Schiaffino Juan;3;Schiaffino Juan Alberto;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 45 partidos, se ignoran 6 partidos como entrenador, consultado 2026-11-13
+roma;Giuseppe Secchi;3;Secchi Giuseppe;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 22 partidos, consultado 2026-11-13
+roma;Angelo Spanio;3;Spanio Angelo;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 27 partidos, consultado 2026-11-13
+roma;Francesco Statuto;3;Statuto Francesco;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 85 partidos, consultado 2026-11-13
+roma;Jonas Thern;3;Thern Jonas;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 68 partidos, consultado 2026-11-13
+roma;Josè Valle;3;Valle Josè;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 69 partidos, consultado 2026-11-13
+roma;Nicola Zalewski;3;Zalewski Nicola;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 122 partidos, consultado 2026-11-13
+roma;Ohene Afena-Gyan Felix;2;Afena-Gyan Felix Ohene;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 22 partidos, consultado 2026-11-13
+roma;Giorgio Barbolini;2;Barbolini Giorgio;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;Marco Baroni;2;Baroni Marco;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 31 partidos, consultado 2026-11-13
+roma;Gianangelo Barzan;2;Barzan Gianangelo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 46 partidos, consultado 2026-11-13
+roma;Antonio Bianchi;2;Bianchi Antonio;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 3 partidos, consultado 2026-11-13
+roma;Walter Bonacina;2;Bonacina Walter;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 114 partidos, consultado 2026-11-13
+roma;Cesare Bovo;2;Bovo Cesare;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 37 partidos, suma de 2 etapas (1 (0) + 36 (2)), consultado 2026-11-13
+roma;Michael Bradley;2;Bradley Michael;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 46 partidos, consultado 2026-11-13
+roma;Marco Branca;2;Branca Marco;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 11 partidos, consultado 2026-11-13
+roma;Antonio Campilongo;2;Campilongo Antonio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 11 partidos, consultado 2026-11-13
+roma;Francesco Cappelli;2;Cappelli Francesco;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 100 partidos, consultado 2026-11-13
+roma;Zeki Çelik Mehmet;2;Çelik Mehmet Zeki;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 150 partidos, consultado 2026-11-13
+roma;Giacomo Chinellato;2;Chinellato Giacomo;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 74 partidos, consultado 2026-11-13
+roma;Giordano Colausig;2;Colausig Giordano;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 34 partidos, consultado 2026-11-13
+roma;Enzo Cozzolini;2;Cozzolini Enzo;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 11 partidos, consultado 2026-11-13
+roma;Leandro Damian Cufré;2;Cufré Leandro Damian;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 108 partidos, suma de 2 etapas (20 (0) + 88 (2)), consultado 2026-11-13
+roma;Emanuele Curcio;2;Curcio Emanuele;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;Olivier Dacourt;2;Dacourt Olivier;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 120 partidos, consultado 2026-11-13
+roma;Raffaele D'Aquino;2;D'Aquino Raffaele;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 119 partidos, consultado 2026-11-13
+roma;Mario David;2;David Mario;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 46 partidos, consultado 2026-11-13
+roma;Amadou Diawara;2;Diawara Amadou;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 66 partidos, consultado 2026-11-13
+roma;Seydou Doumbia;2;Doumbia Seydou;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 14 partidos, consultado 2026-11-13
+roma;Neil El Aynaoui;2;El Aynaoui Neil;https://www.asromaultras.org/E_Uomini.html;;todas las competiciones oficiales, 34 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Matteo Ferrari;2;Ferrari Matteo;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 108 partidos, suma de 2 etapas (46 (0) + 62 (2)), consultado 2026-11-13
+roma;Alfio Fontana;2;Fontana Alfio;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 177 partidos, consultado 2026-11-13
+roma;Diego Fuser;2;Fuser Diego;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 26 partidos, consultado 2026-11-13
+roma;Silva Gerson Santos da;2;Gerson Santos da Silva;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 42 partidos, consultado 2026-11-13
+roma;Paolo Giovannelli;2;Giovannelli Paolo;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 47 partidos, consultado 2026-11-13
+roma;Dean Huijsen;2;Huijsen Dean;https://www.asromaultras.org/H_Uomini.html;;todas las competiciones oficiales, 14 partidos, consultado 2026-11-13
+roma;Marco Lanna;2;Lanna Marco;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 131 partidos, consultado 2026-11-13
+roma;Giacomo Losi;2;Losi Giacomo;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 469 partidos, consultado 2026-11-13
+roma;Domenico Maggiora;2;Maggiora Domenico;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 154 partidos, consultado 2026-11-13
+roma;Saul Malatrasi;2;Malatrasi Saul;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 37 partidos, consultado 2026-11-13
+roma;Nemanja Matić;2;Matić Nemanja;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 50 partidos, consultado 2026-11-13
+roma;Attilio Mattei (I);2;Mattei (I) Attilio;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 90 partidos, consultado 2026-11-13
+roma;Egidio Morbello;2;Morbello Egidio;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 9 partidos, suma de 2 etapas (8 (2) + 1 (0)), consultado 2026-11-13
+roma;Emerson dos Santos Palmieri;2;Palmieri Emerson dos Santos;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 47 partidos, consultado 2026-11-13
+roma;Giovanni Piacentini;2;Piacentini Giovanni;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 189 partidos, consultado 2026-11-13
+roma;Gastone Prendato;2;Prendato Gastone;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 11 partidos, consultado 2026-11-13
+roma;Florian Radu;2;Radu Florian;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 5 partidos, consultado 2026-11-13
+roma;Umberto Renica;2;Renica Umberto;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 26 partidos, consultado 2026-11-13
+roma;Mario Renosto (II);2;Renosto (II) Mario;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 16 partidos, consultado 2026-11-13
+roma;Ubaldo Righetti;2;Righetti Ubaldo;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 170 partidos, consultado 2026-11-13
+roma;Antonio Rüdiger;2;Rüdiger Antonio;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 72 partidos, consultado 2026-11-13
+roma;Enrico Schiavetti;2;Schiavetti Enrico;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 77 partidos, suma de 2 etapas (1 (0) + 76 (2)), consultado 2026-11-13
+roma;Heinz Schnellinger Karl;2;Schnellinger Karl Heinz;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 38 partidos, consultado 2026-11-13
+roma;Giosuè Stucchi;2;Stucchi Giosuè;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 180 partidos, consultado 2026-11-13
+roma;Francesco Tavano;2;Tavano Francesco;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 16 partidos, consultado 2026-11-13
+roma;Otello Trombetta;2;Trombetta Otello;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 5 partidos, consultado 2026-11-13
+roma;Maurizio Turone;2;Turone Maurizio;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 93 partidos, consultado 2026-11-13
+roma;Sadiq Mesbah Umar;2;Umar Sadiq Mesbah;https://www.asromaultras.org/U_Uomini.html;;todas las competiciones oficiales, 6 partidos, consultado 2026-11-13
+roma;Cristian Volpato;2;Volpato Cristian;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 14 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Georgino Wijnaldum;2;Wijnaldum Georgino;https://www.asromaultras.org/W_Uomini.html;;todas las competiciones oficiales, 23 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Antônio Carlos Zago;2;Zago Antônio Carlos;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 139 partidos, consultado 2026-11-13
+roma;Luigi Allemandi (I);1;Allemandi (I) Luigi;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 57 partidos, consultado 2026-11-13
+roma;Mauro Amenta;1;Amenta Mauro;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 27 partidos, consultado 2026-11-13
+roma;Marco Andreolli;1;Andreolli Marco;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 15 partidos, suma de 2 etapas (0 (0) + 15 (1)), consultado 2026-11-13
+roma;Roberto Antonelli;1;Antonelli Roberto;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 11 partidos, consultado 2026-11-13
+roma;Antonio Arena;1;Arena Antonio;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 3 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Davide Astori;1;Astori Davide;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 30 partidos, consultado 2026-11-13
+roma;Antonio Azimonti;1;Azimonti Antonio;https://www.asromaultras.org/A_Uomini.html;;todas las competiciones oficiales, 47 partidos, consultado 2026-11-13
+roma;Guglielmo Bacci;1;Bacci Guglielmo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 18 partidos, consultado 2026-11-13
+roma;Federico Balzaretti;1;Balzaretti Federico;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 44 partidos, consultado 2026-11-13
+roma;Ivo Banella;1;Banella Ivo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 3 partidos, consultado 2026-11-13
+roma;Gustavo Javier Bartelt;1;Bartelt Gustavo Javier;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Michel Fernandes Bastos;1;Bastos Michel Fernandes;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;Renato Benaglia;1;Benaglia Renato;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 32 partidos, consultado 2026-11-13
+roma;Cesare Benedetti (I);1;Benedetti (I) Cesare;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 15 partidos, suma de 2 etapas (9 (1) + 6 (0)), consultado 2026-11-13
+roma;Morales Benitez Victor;1;Benitez Victor Morales;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 26 partidos, suma de 2 etapas (13 (1) + 13 (0)), consultado 2026-11-13
+roma;Daniele Berretta;1;Berretta Daniele;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 30 partidos, suma de 2 etapas (21 (0) + 9 (1)), consultado 2026-11-13
+roma;Aldo Bet;1;Bet Aldo;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 180 partidos, consultado 2026-11-13
+roma;Loris Boni;1;Boni Loris;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 100 partidos, consultado 2026-11-13
+roma;Giovanni Borin;1;Borin Giovanni;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 6 partidos, consultado 2026-11-13
+roma;Enore Boscolo;1;Boscolo Enore;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 7 partidos, consultado 2026-11-13
+roma;Giorgio Braglia;1;Braglia Giorgio;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;Luigi Brunella;1;Brunella Luigi;https://www.asromaultras.org/B_Uomini.html;;todas las competiciones oficiales, 171 partidos, suma de 2 etapas (105 (0) + 66 (1)), se ignoran 56 partidos como entrenador, consultado 2026-11-13
+roma;Riccardo Calafiori;1;Calafiori Riccardo;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 17 partidos, consultado 2026-11-13
+roma;Fernando Canestrelli;1;Canestrelli Fernando;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 1 partidos, consultado 2026-11-13
+roma;Omero Carmellini;1;Carmellini Omero;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 3 partidos, consultado 2026-11-13
+roma;Leandro Castàn;1;Castàn Leandro;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 81 partidos, consultado 2026-11-13
+roma;Josè Chovelas;1;Chovelas Josè;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 35 partidos, consultado 2026-11-13
+roma;Fulvio Collovati;1;Collovati Fulvio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 65 partidos, consultado 2026-11-13
+roma;Daniele Conti;1;Conti Daniele;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 6 partidos, consultado 2026-11-13
+roma;Giulio Corsini;1;Corsini Giulio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 181 partidos, consultado 2026-11-13
+roma;Daniele Corvia;1;Corvia Daniele;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Vittorio Cristini;1;Cristini Vittorio;https://www.asromaultras.org/C_Uomini.html;;todas las competiciones oficiales, 5 partidos, consultado 2026-11-13
+roma;Gregoire Defrel;1;Defrel Gregoire;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 20 partidos, consultado 2026-11-13
+roma;Giovanni Degni;1;Degni Giovanni;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 100 partidos, se ignoran 72 partidos como entrenador, consultado 2026-11-13
+roma;Gianfranco Dell'Innocenti;1;Dell'Innocenti Gianfranco;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 86 partidos, consultado 2026-11-13
+roma;Alberto Di Chiara;1;Di Chiara Alberto;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 6 partidos, consultado 2026-11-13
+roma;Cataldo Di Virgilio;1;Di Virgilio Cataldo;https://www.asromaultras.org/D_Uomini.html;;todas las competiciones oficiales, 4 partidos, consultado 2026-11-13
+roma;Alberto Eliani;1;Eliani Alberto;https://www.asromaultras.org/E_Uomini.html;;todas las competiciones oficiales, 105 partidos, consultado 2026-11-13
+roma;Sergio Ferrari;1;Ferrari Sergio;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 52 partidos, consultado 2026-11-13
+roma;Alessandro Ferri;1;Ferri Alessandro;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 38 partidos, consultado 2026-11-13
+roma;Gianluca Festa;1;Festa Gianluca;https://www.asromaultras.org/F_Uomini.html;;todas las competiciones oficiales, 23 partidos, consultado 2026-11-13
+roma;Fernando Gago;1;Gago Fernando;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 32 partidos, consultado 2026-11-13
+roma;Luigi Ganassi;1;Ganassi Luigi;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 2 partidos, consultado 2026-11-13
+roma;Stefano Guberti;1;Guberti Stefano;https://www.asromaultras.org/G_Uomini.html;;todas las competiciones oficiales, 12 partidos, suma de 2 etapas (12 (1) + 0 (0)), consultado 2026-11-13
+roma;Mats Hummels;1;Hummels Mats;https://www.asromaultras.org/H_Uomini.html;;todas las competiciones oficiales, 20 partidos, consultado 2026-11-13
+roma;Juan Jesus;1;Jesus Juan;https://www.asromaultras.org/J_Uomini.html;;todas las competiciones oficiales, 102 partidos, consultado 2026-11-13
+roma;Rick Karsdorp;1;Karsdorp Rick;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 159 partidos, suma de 2 etapas (15 (0) + 144 (1)), consultado 2026-11-13
+roma;Houssine Kharja;1;Kharja Houssine;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 24 partidos, consultado 2026-11-13
+roma;Rasmus Kristensen;1;Kristensen Rasmus;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 29 partidos, consultado 2026-11-13
+roma;Samuel Kuffour;1;Kuffour Samuel;https://www.asromaultras.org/K_Uomini.html;;todas las competiciones oficiales, 31 partidos, suma de 2 etapas (31 (1) + 0 (0)), consultado 2026-11-13
+roma;Javier Llorente Rios Diego;1;Llorente Rios Diego Javier;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 53 partidos, consultado 2026-11-13
+roma;Alonso López Nicolás Federico;1;López Nicolás Federico Alonso;https://www.asromaultras.org/L_Uomini.html;;todas las competiciones oficiales, 7 partidos, consultado 2026-11-13
+roma;Antonio Maddaluno;1;Maddaluno Antonio;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 8 partidos, consultado 2026-11-13
+roma;Augusto Magli;1;Magli Augusto;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 36 partidos, consultado 2026-11-13
+roma;Ivan Marcano;1;Marcano Ivan;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 13 partidos, consultado 2026-11-13
+roma;Claudio Matteini;1;Matteini Claudio;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 59 partidos, consultado 2026-11-13
+roma;Enzo Menegotti;1;Menegotti Enzo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 51 partidos, consultado 2026-11-13
+roma;Tommaso Milanese;1;Milanese Tommaso;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 3 partidos, consultado 2026-11-13
+roma;Giancarlo Morelli;1;Morelli Giancarlo;https://www.asromaultras.org/M_Uomini.html;;todas las competiciones oficiales, 1 partidos, consultado 2026-11-13
+roma;Giacomo Narizzano;1;Narizzano Giacomo;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 4 partidos, consultado 2026-11-13
+roma;Knut Nordahl (II);1;Nordahl (II) Knut;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 61 partidos, consultado 2026-11-13
+roma;Steven Mike Christopher Nkemboanza Nzonzi;1;Nzonzi Steven Mike Christopher Nkemboanza;https://www.asromaultras.org/N_Uomini.html;;todas las competiciones oficiales, 39 partidos, consultado 2026-11-13
+roma;Pietro Pastore;1;Pastore Pietro;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 4 partidos, consultado 2026-11-13
+roma;Stefano Pellegrini (III);1;Pellegrini (III) Stefano;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 71 partidos, consultado 2026-11-13
+roma;Domenico Penzo;1;Penzo Domenico;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 23 partidos, consultado 2026-11-13
+roma;Osvaldo Peretti;1;Peretti Osvaldo;https://www.asromaultras.org/P_Uomini.html;;todas las competiciones oficiales, 7 partidos, consultado 2026-11-13
+roma;Leopoldo Raimondi;1;Raimondi Leopoldo;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 16 partidos, consultado 2026-11-13
+roma;Devyne Rensch;1;Rensch Devyne;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 50 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Bruno Ricci;1;Ricci Bruno;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 2 partidos, consultado 2026-11-13
+roma;Alessandro Rinaldi;1;Rinaldi Alessandro;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 45 partidos, consultado 2026-11-13
+roma;Alessio Romagnoli;1;Romagnoli Alessio;https://www.asromaultras.org/R_Uomini.html;;todas las competiciones oficiales, 14 partidos, consultado 2026-11-13
+roma;Ruggero Salar;1;Salar Ruggero;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 61 partidos, consultado 2026-11-13
+roma;Renato Sanches;1;Sanches Renato;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 12 partidos, consultado 2026-11-13
+roma;Abdulhamid Saud;1;Saud Abdulhamid;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 8 partidos, consultado 2026-11-13
+roma;Nevio Scala;1;Scala Nevio;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 28 partidos, consultado 2026-11-13
+roma;Filippo Maria Scardina;1;Scardina Filippo Maria;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 1 partidos, consultado 2026-11-13
+roma;Selvaag Solbakken Ola;1;Solbakken Ola Selvaag;https://www.asromaultras.org/S_Uomini.html;;todas las competiciones oficiales, 14 partidos, consultado 2026-11-13
+roma;Panagiotis Tachtsidis;1;Tachtsidis Panagiotis;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 23 partidos, consultado 2026-11-13
+roma;Glauco Tomasin;1;Tomasin Glauco;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 51 partidos, consultado 2026-11-13
+roma;Max Tonetto;1;Tonetto Max;https://www.asromaultras.org/T_Uomini.html;;todas las competiciones oficiales, 121 partidos, consultado 2026-11-13
+roma;Giacomo Valentini;1;Valentini Giacomo;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 7 partidos, consultado 2026-11-13
+roma;Robinio Vaz;1;Vaz Robinio;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 14 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
+roma;Valerio Virga;1;Virga Valerio;https://www.asromaultras.org/V_Uomini.html;;todas las competiciones oficiales, 16 partidos, suma de 5 etapas (9 (0) + 6 (1) + 1 (0) + 0 (0) + 0 (0)), consultado 2026-11-13
+roma;Christian Wilhelmsson;1;Wilhelmsson Christian;https://www.asromaultras.org/W_Uomini.html;;todas las competiciones oficiales, 25 partidos, consultado 2026-11-13
+roma;Mapou Yanga-Mbiwa;1;Yanga-Mbiwa Mapou;https://www.asromaultras.org/Y_Uomini.html;;todas las competiciones oficiales, 38 partidos, consultado 2026-11-13
+roma;Jonathan Zebina;1;Zebina Jonathan;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 126 partidos, consultado 2026-11-13
+roma;Jan Ziółkowski;1;Ziółkowski Jan;https://www.asromaultras.org/Z_Uomini.html;;todas las competiciones oficiales, 22 partidos, '*' = datos actualizados a la última temporada concluida, consultado 2026-11-13
