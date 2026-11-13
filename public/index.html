@@ -22,13 +22,16 @@
         <input id="home-code" maxlength="4" placeholder="CÓDIGO" autocomplete="off">
         <button id="btn-join">Unirme</button>
       </div>
+      <p id="home-invite" class="invite hidden"></p>
       <p id="home-error" class="error"></p>
       <p id="data-status" class="muted small"></p>
     </section>
 
     <!-- Sala de espera -->
     <section id="screen-lobby" class="screen hidden">
-      <p>Compartí el código <strong id="lobby-code"></strong> para que se unan.</p>
+      <p>Compartí el código <strong id="lobby-code"></strong> o el link para que se unan. La partida empieza cuando el anfitrión toca <b>Empezar partida</b>.</p>
+      <button id="btn-invite">Compartir link de invitación</button>
+      <p id="invite-msg" class="muted small"></p>
       <ul id="lobby-players" class="players"></ul>
       <div id="lobby-settings" class="settings">
         <label>Rondas <select id="set-rounds"></select></label>
@@ -49,6 +52,8 @@
           <div id="team-name" class="team-name"></div>
         </div>
       </div>
+
+      <div id="countdown" class="countdown hidden"><span id="countdown-num">3</span><small>¡Prepárense!</small></div>
 
       <form id="pick-form" class="pick">
         <input id="pick-input" placeholder="Nombre del jugador" autocomplete="off" autocapitalize="off" spellcheck="false">

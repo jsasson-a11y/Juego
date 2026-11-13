@@ -15,7 +15,7 @@ const nextState = (s, pred) => new Promise((res) => {
 });
 
 test('dos jugadores juegan una partida online', async () => {
-  const { server, rooms } = createServer({ dataDir: path.join(__dirname, 'fixtures'), options: { pickMs: 1500, revealMs: 200, minPlayers: 1 } });
+  const { server, rooms } = createServer({ dataDir: path.join(__dirname, 'fixtures'), options: { pickMs: 1500, revealMs: 200, minPlayers: 1, countdownMs: 300 } });
   await new Promise((r) => server.listen(0, r));
   const url = `http://localhost:${server.address().port}`;
   const c1 = ioc(url);

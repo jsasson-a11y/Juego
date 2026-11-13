@@ -37,6 +37,26 @@ $('btn-join').onclick = () => {
 };
 $('home-code').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('btn-join').click(); });
 
+// Link de invitación: /?sala=ABCD
+const invited = (new URLSearchParams(location.search).get('sala') || '').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 4);
+if (invited) {
+  $('home-code').value = invited;
+  $('home-invite').textContent = `Te invitaron a la sala ${invited}: poné tu nombre y tocá "Unirme".`;
+  $('home-invite').classList.remove('hidden');
+  $('home-name').addEventListener('keydown', (e) => { if (e.key === 'Enter') $('btn-join').click(); });
+}
+
+$('btn-invite').onclick = async () => {
+  const url = `${location.origin}/?sala=${state.code}`;
+  try {
+    if (navigator.share) { await navigator.share({ title: 'Goleadores', text: `Sumate a mi sala ${state.code}`, url }); return; }
+    await navigator.clipboard.writeText(url);
+    $('invite-msg').textContent = `Link copiado: ${url}`;
+  } catch {
+    $('invite-msg').textContent = `Compartí este link: ${url}`;
+  }
+};
+
 socket.on('connect', () => {
   const s = store.get();
   if (s) socket.emit('room:resume', s, (res) => { if (res.error) { store.clear(); show('home'); } });
@@ -159,8 +179,25 @@ function render() {
     return;
   }
 
+  if (state.phase === 'countdown') {
+    show('game');
+    $('game-round').textContent = `Ronda ${state.round} de ${state.settings.rounds}`;
+    $('team-badge').innerHTML = '<span class="badge big"><span class="shield" style="--c1:#2b4234;--c2:#18271e"><b>?</b></span></span>';
+    $('team-name').textContent = '¿Qué equipo saldrá?';
+    $('team-league').textContent = '';
+    $('countdown').classList.remove('hidden');
+    $('pick-form').classList.add('hidden');
+    $('reveal').classList.add('hidden');
+    $('pick-msg').textContent = '';
+    $('my-ledger').innerHTML = ledger(state.you, { saldoId: 'saldo-me' });
+    playerList($('game-players'), state.players);
+    animateSaldos();
+    return;
+  }
+
   if (state.phase === 'picking' || state.phase === 'reveal') {
     show('game');
+    $('countdown').classList.add('hidden');
     $('game-round').textContent = `Ronda ${state.round} de ${state.settings.rounds}`;
     $('team-badge').innerHTML = badge(state.team.id, 'big');
     $('team-name').textContent = state.team.name;
@@ -215,6 +252,12 @@ socket.on('room:state', (s) => {
 });
 
 setInterval(() => {
+  if (state && state.deadline && state.phase === 'countdown') {
+    const n = Math.max(1, Math.ceil((state.deadline - (Date.now() + clockOffset)) / 1000));
+    $('countdown-num').textContent = n;
+    $('game-timer').textContent = '';
+    return;
+  }
   if (!state || !state.deadline || state.phase !== 'picking') { $('game-timer').textContent = ''; return; }
   const left = Math.max(0, Math.ceil((state.deadline - (Date.now() + clockOffset)) / 1000));
   $('game-timer').textContent = `${left}s`;

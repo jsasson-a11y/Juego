@@ -17,7 +17,7 @@ const teams = [
 ];
 
 function setup(target = 1000, rounds = 4) {
-  const room = new Room({ code: 'TEST', teams, options: { pickMs: 60_000, revealMs: 60_000, minPlayers: 1 }, random: () => 0 });
+  const room = new Room({ code: 'TEST', teams, options: { pickMs: 60_000, revealMs: 60_000, minPlayers: 1, countdownMs: 0 }, random: () => 0 });
   const a = room.addPlayer('Ana').player;
   const b = room.addPlayer('Beto').player;
   assert.deepEqual(room.updateSettings(a.id, { rounds, target }), { ok: true });
@@ -102,5 +102,18 @@ test('las elecciones ajenas no se ven durante la ronda', () => {
   assert.equal(sb.myPick, null);
   assert.equal(sb.players.find((p) => p.id === a.id).picked, true);
   assert.equal(JSON.stringify(sb).includes('Jugador Uno'), false);
+  room.destroy();
+});
+
+test('cuenta regresiva: el equipo no se ve hasta que empieza la ronda', () => {
+  const room = new Room({ code: 'C', teams, options: { minPlayers: 1, countdownMs: 60_000, pickMs: 60_000 }, random: () => 0 });
+  const a = room.addPlayer('Ana').player;
+  room.start(a.id);
+  assert.equal(room.phase, 'countdown');
+  assert.equal(room.publicState(a.id).team, null);
+  assert.ok(room.submit(a.id, 'Jugador Uno').error, 'no se puede elegir durante la cuenta regresiva');
+  room.startPicking();
+  assert.equal(room.phase, 'picking');
+  assert.equal(room.publicState(a.id).team.id, 'equipo-a');
   room.destroy();
 });

@@ -6,6 +6,7 @@ const { findPlayer } = require('./matcher');
 const DEFAULTS = {
   pickMs: 10_000,     // tiempo para elegir jugador
   revealMs: 6_000,    // tiempo mostrando resultados de la ronda
+  countdownMs: 3_000, // cuenta regresiva antes de cada ronda
   minRounds: 4,
   maxRounds: 8,
   defaultRounds: 4,
@@ -31,7 +32,7 @@ class Room {
     this.players = new Map(); // id -> { id, token, name, remaining, connected, picks: [] }
     this.hostId = null;
     this.settings = { rounds: this.opts.defaultRounds, target: this.opts.defaultTarget };
-    this.phase = 'lobby'; // lobby | picking | reveal | finished
+    this.phase = 'lobby'; // lobby | countdown | picking | reveal | finished
     this.round = 0;
     this.team = null;
     this.deadline = null;
@@ -132,6 +133,18 @@ class Room {
     this.round += 1;
     this.team = this.pickTeam();
     this.roundPicks = new Map();
+    if (this.opts.countdownMs > 0) {
+      // Cuenta regresiva igual para todos; el equipo no se muestra hasta que termina.
+      this.phase = 'countdown';
+      this.deadline = this.now() + this.opts.countdownMs;
+      this.setTimer(this.opts.countdownMs, () => this.startPicking());
+      this.changed();
+    } else {
+      this.startPicking();
+    }
+  }
+
+  startPicking() {
     this.phase = 'picking';
     this.deadline = this.now() + this.opts.pickMs;
     this.setTimer(this.opts.pickMs, () => this.endRound());
@@ -238,7 +251,8 @@ class Room {
       limits: { minRounds: this.opts.minRounds, maxRounds: this.opts.maxRounds },
       phase: this.phase,
       round: this.round,
-      team: this.team ? { id: this.team.id, name: this.team.name, country: this.team.country, league: this.team.league } : null,
+      team: this.team && this.phase !== 'countdown'
+        ? { id: this.team.id, name: this.team.name, country: this.team.country, league: this.team.league } : null,
       deadline: this.deadline,
       serverTime: this.now(),
       playableTeams: this.playableTeams().length,
