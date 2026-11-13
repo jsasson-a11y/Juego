@@ -51,6 +51,7 @@ Cada fuente queda en su propio archivo en `data/sources/` y `scripts/merge_sourc
 
 - Si dos fuentes difieren, se usa el número **más alto**. Si hay una sola, se usa esa.
 - Las filas marcadas "solo liga" se descartan (se piden goles totales).
+- Amistosos: si una fuente los incluye (por ejemplo Nacional en Wikipedia o la base de São Paulo), cuentan; si no, no. Decisión del usuario, revisable más adelante.
 - Cada jugador queda con `validacion` (`coinciden`, `difieren`, `una_fuente`) y `detalle` (goles según cada fuente) para poder revisarlo.
 - `data/sources/excluidas/` guarda fuentes descartadas y el motivo.
 
