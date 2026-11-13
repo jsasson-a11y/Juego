@@ -96,7 +96,8 @@
    "title": "List of FC Barcelona players",
    "tables": [
     1
-   ]
+   ],
+   "nota": "solo liga"
   }
  ],
  "atletico-madrid": [
@@ -114,7 +115,8 @@
    "title": "Sevilla FC",
    "tables": [
     39
-   ]
+   ],
+   "nota": "solo top 10"
   }
  ],
  "juventus": [
@@ -175,7 +177,8 @@
     0
    ],
    "name_col": "Spieler",
-   "goals_sum_re": " / T$"
+   "goals_sum_re": " / T$",
+   "nota": "solo partidos oficiales de la era Bundesliga"
   }
  ],
  "borussia-dortmund": [

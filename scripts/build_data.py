@@ -1,4 +1,4 @@
-"""Genera data/goleadores.csv a partir de las páginas de Wikipedia listadas en scripts/sources.json.
+"""Genera data/sources/wikipedia.csv a partir de las páginas de Wikipedia listadas en scripts/sources.json.
 
     python3 scripts/build_data.py              # todos los equipos -> escribe data/goleadores.csv
     python3 scripts/build_data.py arsenal ...  # solo algunos (para revisar), no escribe el CSV
@@ -142,10 +142,10 @@ def build(team_ids=None):
                         continue
                     prev.update(goles=goals, fuente=url)
                 else:
-                    merged[name] = {'goles': goals, 'alias': set(aliases), 'fuente': url}
+                    merged[name] = {'goles': goals, 'alias': set(aliases), 'fuente': url, 'nota': src.get('nota', '')}
         for name, d in merged.items():
             out.append({'equipo_id': tid, 'jugador': name, 'goles': d['goles'],
-                        'alias': '|'.join(sorted(d['alias'])), 'fuente': d['fuente']})
+                        'alias': '|'.join(sorted(d['alias'])), 'fuente': d['fuente'], 'nota': d.get('nota', '')})
         top = sorted(merged.items(), key=lambda kv: -kv[1]['goles'])[:5]
         report.append((tid, len(merged), top, notes))
     return out, report
@@ -161,11 +161,13 @@ def main():
                 print('   ', note)
         print('    top:', ', '.join(f'{k} {v["goles"]}' for k, v in top))
     if not ids:
-        with open(ROOT / 'data' / 'goleadores.csv', 'w', newline='', encoding='utf-8') as f:
-            w = csv.DictWriter(f, fieldnames=['equipo_id', 'jugador', 'goles', 'alias', 'fuente'], delimiter=';')
+        dest = ROOT / 'data' / 'sources' / 'wikipedia.csv'
+        with open(dest, 'w', newline='', encoding='utf-8') as f:
+            w = csv.DictWriter(f, fieldnames=['equipo_id', 'jugador', 'goles', 'alias', 'fuente', 'fecha_dato', 'nota'],
+                               delimiter=';', extrasaction='ignore')
             w.writeheader()
             w.writerows(out)
-        print(f'\nEscrito data/goleadores.csv con {len(out)} filas')
+        print(f'\nEscrito {dest.relative_to(ROOT)} con {len(out)} filas (luego: python3 scripts/merge_sources.py)')
 
 
 if __name__ == '__main__':

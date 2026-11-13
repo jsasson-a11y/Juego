@@ -1,0 +1,9 @@
+# Configuración para publicar en Render (https://render.com/docs/blueprint-spec)
+services:
+  - type: web
+    name: goleadores
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/teams
