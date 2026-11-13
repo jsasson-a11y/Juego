@@ -182,10 +182,10 @@ class Room {
     for (const p of this.players.values()) {
       const r = this.roundPicks.get(p.id) || { status: 'timeout', goals: 0 };
       p.remaining -= r.goals;
-      p.picks.push({ round: this.round, team: this.team.name, ...r });
+      p.picks.push({ round: this.round, team: this.team.name, teamId: this.team.id, ...r });
       entries.push({ playerId: p.id, name: p.name, ...r, remaining: p.remaining });
     }
-    this.history.push({ round: this.round, team: this.team.name, entries });
+    this.history.push({ round: this.round, team: this.team.name, teamId: this.team.id, entries });
 
     // Gana quien llega a 0 (o se pasa). Si varios llegan en la misma ronda, ganan todos.
     const reached = [...this.players.values()].filter((p) => p.remaining <= 0);
@@ -238,7 +238,7 @@ class Room {
       limits: { minRounds: this.opts.minRounds, maxRounds: this.opts.maxRounds },
       phase: this.phase,
       round: this.round,
-      team: this.team ? { name: this.team.name, country: this.team.country, league: this.team.league } : null,
+      team: this.team ? { id: this.team.id, name: this.team.name, country: this.team.country, league: this.team.league } : null,
       deadline: this.deadline,
       serverTime: this.now(),
       playableTeams: this.playableTeams().length,

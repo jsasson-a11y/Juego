@@ -40,7 +40,7 @@ button:disabled { opacity: .5; cursor: default; }
 .round-info { display: flex; justify-content: space-between; color: var(--muted); }
 .timer { font-size: 1.6rem; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; }
 .timer.low { color: var(--warn); }
-.team-card { text-align: center; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px 12px; margin: 10px 0 14px; }
+.team-card { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin: 10px 0 14px; }
 .team-name { font-size: 1.8rem; font-weight: 800; }
 .pick { display: flex; gap: 8px; }
 .pick input { margin: 0; }
@@ -54,3 +54,39 @@ button:disabled { opacity: .5; cursor: default; }
 .results td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
 details { margin: 16px 0; }
 summary { cursor: pointer; color: var(--muted); }
+
+/* Escudo genérico: dos colores del club y su sigla */
+.badge { display: inline-flex; flex: none; filter: drop-shadow(0 0 1px rgba(255,255,255,.55)) drop-shadow(0 1px 2px rgba(0,0,0,.5)); }
+.badge .shield { width: 34px; height: 40px; display: grid; place-items: center;
+  clip-path: polygon(50% 0, 100% 10%, 100% 55%, 50% 100%, 0 55%, 0 10%);
+  background: linear-gradient(135deg, var(--c1) 0 52%, var(--c2) 52% 100%); }
+.badge b { font-size: 10px; letter-spacing: .02em; color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 1px #000; padding-bottom: 6px; }
+.badge.big .shield { width: 64px; height: 76px; }
+.badge.big b { font-size: 16px; padding-bottom: 10px; }
+.badge-img { width: 34px; height: 40px; object-fit: contain; flex: none; }
+.badge-img.big { width: 64px; height: 76px; }
+
+/* Cuenta (resta) */
+.ledger { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 6px 14px; }
+.lrow { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.lrow:last-child { border-bottom: 0; }
+.lname { flex: 1; min-width: 0; display: flex; flex-direction: column; overflow-wrap: anywhere; }
+.lname small { color: var(--muted); font-size: .8rem; }
+.lnum { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
+.minus { color: #ff8a8a; font-variant-numeric: tabular-nums; font-weight: 700; }
+.lrow.start .lname, .lrow.start .lnum { color: var(--muted); }
+.lrow.pending { opacity: .7; }
+.lrow.saldo { border-top: 2px solid var(--text); border-bottom: 0; margin-top: 2px; }
+.lrow.saldo .lname { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: .85rem; }
+.lrow.saldo .lnum { font-size: 2rem; color: var(--accent); }
+
+/* Resultados de la ronda */
+.reveal-list { display: flex; flex-direction: column; gap: 6px; }
+.rv { display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.rv-math { display: flex; flex-direction: column; align-items: flex-end; white-space: nowrap; }
+.rv-math .eq { font-variant-numeric: tabular-nums; font-weight: 700; }
+
+/* Final */
+.ledgers { display: flex; flex-direction: column; gap: 14px; margin: 12px 0 18px; }
+.ledger-card .ledger-head { font-weight: 700; margin: 0 0 6px 2px; }
+.ledger-card.winner .ledger { border-color: var(--accent); }

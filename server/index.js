@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -14,11 +15,17 @@ function createServer({ dataDir, options } = {}) {
   const playable = teams.filter((t) => t.players.length > 0 && t.players.length >= minPlayers);
   console.log(`[datos] ${playable.length}/${teams.length} equipos en juego (mínimo ${minPlayers} jugadores cargados)`);
 
+  // Logos opcionales: public/logos/<equipo_id>.svg|png|webp (solo si se tienen los derechos de uso).
+  const logoDir = path.join(__dirname, '..', 'public', 'logos');
+  const logoFor = (id) => ['svg', 'png', 'webp'].map((ext) => `${id}.${ext}`)
+    .find((f) => fs.existsSync(path.join(logoDir, f)));
+
   const app = express();
   app.use(express.static(path.join(__dirname, '..', 'public')));
   app.get('/api/teams', (_req, res) => {
     res.json(teams.map((t) => ({
-      id: t.id, name: t.name, country: t.country, league: t.league,
+      id: t.id, name: t.name, country: t.country, league: t.league, short: t.short, colors: t.colors,
+      logo: logoFor(t.id) ? `logos/${logoFor(t.id)}` : null,
       players: t.players.length, playable: t.players.length > 0 && t.players.length >= minPlayers,
     })));
   });

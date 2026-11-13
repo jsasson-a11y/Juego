@@ -6,6 +6,8 @@ const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&
 const SESSION_KEY = 'goleadores-session';
 
 let state = null;
+let TEAMS = {};
+const shownSaldo = {}; // para animar la resta del saldo
 let clockOffset = 0;
 let lastRoundShown = 0;
 
@@ -21,6 +23,8 @@ function show(screen) {
 
 // --- Inicio ---
 fetch('/api/teams').then((r) => r.json()).then((teams) => {
+  TEAMS = Object.fromEntries(teams.map((t) => [t.id, t]));
+  render();
   const playable = teams.filter((t) => t.playable).length;
   $('data-status').textContent = `Equipos en juego: ${playable} de ${teams.length}.`;
 }).catch(() => {});
@@ -81,15 +85,55 @@ function playerList(el, players, { showPicked = false, winners = [] } = {}) {
     }).join('');
 }
 
-function describe(entry) {
-  if (entry.status === 'found') return `${esc(entry.footballer)}`;
-  if (entry.status === 'notfound') return `<span class="muted">"${esc(entry.input)}" (no está)</span>`;
-  return '<span class="muted">sin respuesta</span>';
+// Escudo genérico con los colores y la sigla del equipo (o el logo, si existe en public/logos/).
+function badge(teamId, size = '') {
+  const t = TEAMS[teamId];
+  if (t && t.logo) return `<img class="badge-img ${size}" src="${esc(t.logo)}" alt="${esc(t.name)}">`;
+  const [c1, c2] = (t && t.colors) || ['#556', '#889'];
+  const short = (t && t.short) || '?';
+  return `<span class="badge ${size}" title="${esc(t ? t.name : '')}"><span class="shield" style="--c1:${esc(c1)};--c2:${esc(c2)}"><b>${esc(short)}</b></span></span>`;
 }
 
-function historyTable(round) {
-  return `<table class="results"><tbody>${round.entries.map((e) =>
-    `<tr><td>${esc(e.name)}</td><td>${describe(e)}</td><td class="num">−${e.goals}</td><td class="num">${e.remaining}</td></tr>`).join('')}</tbody></table>`;
+function pickLabel(e) {
+  if (e.status === 'found') return esc(e.footballer);
+  if (e.status === 'notfound') return `<span class="muted">"${esc(e.input)}" · no está</span>`;
+  return '<span class="muted">Sin respuesta</span>';
+}
+
+// Cuenta de un participante: arranca en el objetivo y resta lo de cada ronda.
+function ledger(playerId, { pending = null, saldoId = '' } = {}) {
+  const rows = [`<div class="lrow start"><span class="lname">Objetivo</span><span class="lnum">${state.settings.target}</span></div>`];
+  let saldo = state.settings.target;
+  for (const r of state.history) {
+    const e = r.entries.find((x) => x.playerId === playerId);
+    if (!e) continue;
+    saldo = e.remaining;
+    rows.push(`<div class="lrow">${badge(r.teamId)}<span class="lname">${pickLabel(e)}<small>${esc(r.team)} · ronda ${r.round}</small></span><span class="lnum minus">−${e.goals}</span></div>`);
+  }
+  if (pending) {
+    const label = pending.status === 'found' ? esc(pending.footballer) : `<span class="muted">"${esc(pending.input)}" · no está</span>`;
+    rows.push(`<div class="lrow pending">${badge(state.team && state.team.id)}<span class="lname">${label}<small>se resta al terminar la ronda</small></span><span class="lnum minus">−${pending.goals}</span></div>`);
+  }
+  rows.push(`<div class="lrow saldo"><span class="lname">Saldo</span><span class="lnum" ${saldoId ? `id="${saldoId}" data-target="${saldo}"` : ''}>${saldoId ? (shownSaldo[saldoId] ?? saldo) : saldo}</span></div>`);
+  return rows.join('');
+}
+
+// Animación: el saldo baja de a poco hasta el valor nuevo.
+function animateSaldos() {
+  document.querySelectorAll('[data-target]').forEach((el) => {
+    const id = el.id;
+    const to = Number(el.dataset.target);
+    const from = shownSaldo[id] ?? to;
+    if (from === to) { shownSaldo[id] = to; el.textContent = to; return; }
+    const t0 = performance.now();
+    const step = (now) => {
+      const k = Math.min(1, (now - t0) / 900);
+      const v = Math.round(from + (to - from) * (1 - Math.pow(1 - k, 3)));
+      el.textContent = v;
+      if (k < 1) requestAnimationFrame(step); else shownSaldo[id] = to;
+    };
+    requestAnimationFrame(step);
+  });
 }
 
 function render() {
@@ -117,7 +161,8 @@ function render() {
 
   if (state.phase === 'picking' || state.phase === 'reveal') {
     show('game');
-    $('game-round').textContent = `Ronda ${state.round} de ${state.settings.rounds} · Objetivo ${state.settings.target}`;
+    $('game-round').textContent = `Ronda ${state.round} de ${state.settings.rounds}`;
+    $('team-badge').innerHTML = badge(state.team.id, 'big');
     $('team-name').textContent = state.team.name;
     $('team-league').textContent = state.team.league;
     const picking = state.phase === 'picking';
@@ -135,11 +180,16 @@ function render() {
     if (picking && state.myPick) $('pick-input').disabled = true;
     if (!picking) {
       const last = state.history[state.history.length - 1];
-      $('reveal-body').innerHTML = last.entries.map((e) =>
-        `<tr><td>${esc(e.name)}</td><td>${describe(e)}</td><td class="num">−${e.goals}</td></tr>`).join('');
-      $('reveal-next').textContent = 'La próxima ronda empieza en unos segundos…';
+      $('reveal-title').textContent = `Ronda ${last.round}: ${last.team}`;
+      $('reveal-body').innerHTML = last.entries.map((e) => `
+        <div class="rv">${badge(last.teamId)}
+          <span class="lname"><b>${esc(e.name)}</b><small>${pickLabel(e)}</small></span>
+          <span class="rv-math"><span class="minus">−${e.goals}</span><span class="eq">= ${e.remaining}</span></span>
+        </div>`).join('');
     }
+    $('my-ledger').innerHTML = ledger(state.you, { pending: picking ? state.myPick : null, saldoId: 'saldo-me' });
     playerList($('game-players'), state.players, { showPicked: picking });
+    animateSaldos();
     return;
   }
 
@@ -147,8 +197,12 @@ function render() {
     show('final');
     const names = state.players.filter((p) => state.winners.includes(p.id)).map((p) => p.name);
     $('final-title').textContent = names.length > 1 ? `🏆 Empate: ${names.join(', ')}` : `🏆 Ganó ${names[0] || '—'}`;
-    playerList($('final-players'), state.players, { winners: state.winners });
-    $('final-history').innerHTML = state.history.map((r) => `<h3>Ronda ${r.round}: ${esc(r.team)}</h3>${historyTable(r)}`).join('');
+    const ordered = [...state.players].sort((a, b) => a.remaining - b.remaining);
+    $('final-ledgers').innerHTML = ordered.map((p) => `
+      <div class="ledger-card ${state.winners.includes(p.id) ? 'winner' : ''}">
+        <div class="ledger-head">${state.winners.includes(p.id) ? '🏆 ' : ''}${esc(p.name)}${p.id === state.you ? ' <span class="tag">vos</span>' : ''}</div>
+        <div class="ledger">${ledger(p.id)}</div>
+      </div>`).join('');
     $('btn-again').classList.toggle('hidden', !isHost);
     $('final-wait').classList.toggle('hidden', isHost);
   }

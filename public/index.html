@@ -43,8 +43,11 @@
     <section id="screen-game" class="screen hidden">
       <div class="round-info"><span id="game-round"></span><span id="game-timer" class="timer"></span></div>
       <div class="team-card">
-        <div id="team-league" class="muted small"></div>
-        <div id="team-name" class="team-name"></div>
+        <div id="team-badge"></div>
+        <div>
+          <div id="team-league" class="muted small"></div>
+          <div id="team-name" class="team-name"></div>
+        </div>
       </div>
 
       <form id="pick-form" class="pick">
@@ -54,23 +57,22 @@
       <p id="pick-msg" class="msg"></p>
 
       <div id="reveal" class="hidden">
-        <h3>Resultados de la ronda</h3>
-        <table class="results"><tbody id="reveal-body"></tbody></table>
-        <p class="muted small" id="reveal-next"></p>
+        <h3 id="reveal-title">Resultados de la ronda</h3>
+        <div id="reveal-body" class="reveal-list"></div>
+        <p class="muted small">La próxima ronda empieza en unos segundos…</p>
       </div>
 
-      <h3>Goles que faltan</h3>
+      <h3>Tu cuenta</h3>
+      <div id="my-ledger" class="ledger"></div>
+
+      <h3>Saldo de todos</h3>
       <ul id="game-players" class="players scores"></ul>
     </section>
 
     <!-- Final -->
     <section id="screen-final" class="screen hidden">
       <h2 id="final-title"></h2>
-      <ul id="final-players" class="players scores"></ul>
-      <details>
-        <summary>Ver todas las rondas</summary>
-        <div id="final-history"></div>
-      </details>
+      <div id="final-ledgers" class="ledgers"></div>
       <button id="btn-again" class="primary">Jugar otra vez</button>
       <p id="final-wait" class="muted">El anfitrión puede iniciar otra partida.</p>
       <p id="final-error" class="error"></p>
