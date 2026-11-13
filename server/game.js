@@ -187,6 +187,18 @@ class Room {
     return { status: 'found', message: MESSAGES.found(result.footballer, result.goals), retry: false };
   }
 
+  // Pasar: no se le ocurre nadie, suma 0 en esta ronda.
+  pass(byId) {
+    const p = this.players.get(byId);
+    if (!p) return { error: 'No estás en la sala.' };
+    if (this.phase !== 'picking') return { error: 'No es momento de elegir.' };
+    if (this.roundPicks.has(byId)) return { error: 'Ya elegiste en esta ronda.' };
+    this.roundPicks.set(byId, { status: 'pass', goals: 0 });
+    this.changed();
+    this.maybeEndRoundEarly();
+    return { status: 'pass', message: 'Pasaste: esta ronda suma 0.', retry: false };
+  }
+
   maybeEndRoundEarly() {
     const active = [...this.players.values()].filter((p) => p.connected);
     if (active.length > 0 && active.every((p) => this.roundPicks.has(p.id))) this.endRound();

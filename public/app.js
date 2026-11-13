@@ -79,6 +79,16 @@ $('btn-start').onclick = () => socket.emit('game:start', {}, (res) => { $('lobby
 $('btn-again').onclick = () => socket.emit('game:start', {}, (res) => { $('final-error').textContent = res.error || ''; });
 
 // --- Juego ---
+$('btn-pass').onclick = () => {
+  socket.emit('pick:pass', {}, (res) => {
+    const msg = $('pick-msg');
+    if (res.error) { msg.textContent = res.error; msg.className = 'msg bad'; return; }
+    msg.textContent = res.message;
+    msg.className = 'msg warn';
+    $('pick-input').disabled = true;
+    $('btn-pass').disabled = true; $('btn-pick').disabled = true;
+  });
+};
 $('pick-form').onsubmit = (e) => {
   e.preventDefault();
   const text = $('pick-input').value.trim();
@@ -90,6 +100,7 @@ $('pick-form').onsubmit = (e) => {
     msg.className = `msg ${res.status === 'found' ? 'ok' : res.retry ? 'warn' : 'bad'}`;
     if (res.retry) { $('pick-input').select(); return; }
     $('pick-input').disabled = true;
+    $('btn-pass').disabled = true; $('btn-pick').disabled = true;
   });
 };
 
@@ -101,7 +112,7 @@ function playerList(el, players, { showPicked = false, winners = [] } = {}) {
       if (p.id === state.you) tags.push('vos');
       if (p.id === state.hostId) tags.push('anfitrión');
       if (!p.connected) tags.push('desconectado');
-      if (showPicked && p.picked) tags.push('✔ eligió');
+      if (showPicked && p.picked) tags.push('✔ listo');
       const right = state.phase === 'lobby' ? '' : `<span class="num">${p.remaining}</span>`;
       const cls = [p.connected ? '' : 'off', winners.includes(p.id) ? 'winner' : ''].join(' ');
       return `<li class="${cls}"><span>${winners.includes(p.id) ? '🏆 ' : ''}${esc(p.name)}<span class="tag">${tags.join(' · ')}</span></span>${right}</li>`;
@@ -119,6 +130,7 @@ function badge(teamId, size = '') {
 
 function pickLabel(e) {
   if (e.status === 'found') return esc(e.footballer);
+  if (e.status === 'pass') return '<span class="muted">Pasó</span>';
   if (e.status === 'notfound') return `<span class="muted">"${esc(e.input)}" · no está</span>`;
   return '<span class="muted">Sin respuesta</span>';
 }
@@ -134,7 +146,7 @@ function ledger(playerId, { pending = null, saldoId = '' } = {}) {
     rows.push(`<div class="lrow">${badge(r.teamId)}<span class="lname">${pickLabel(e)}<small>${esc(r.team)} · ronda ${r.round}</small></span><span class="lnum minus">−${e.goals}</span></div>`);
   }
   if (pending) {
-    const label = pending.status === 'found' ? esc(pending.footballer) : `<span class="muted">"${esc(pending.input)}" · no está</span>`;
+    const label = pickLabel(pending);
     rows.push(`<div class="lrow pending">${badge(state.team && state.team.id)}<span class="lname">${label}<small>se resta al terminar la ronda</small></span><span class="lnum minus">−${pending.goals}</span></div>`);
   }
   rows.push(`<div class="lrow saldo"><span class="lname">Saldo</span><span class="lnum" ${saldoId ? `id="${saldoId}" data-target="${saldo}"` : ''}>${saldoId ? (shownSaldo[saldoId] ?? saldo) : saldo}</span></div>`);
@@ -218,11 +230,12 @@ function render() {
       lastRoundShown = state.round;
       $('pick-input').value = '';
       $('pick-input').disabled = false;
+      $('btn-pass').disabled = false; $('btn-pick').disabled = false;
       $('pick-msg').textContent = '';
       $('pick-msg').className = 'msg';
       $('pick-input').focus();
     }
-    if (picking && state.myPick) $('pick-input').disabled = true;
+    if (picking && state.myPick) { $('pick-input').disabled = true; $('btn-pass').disabled = true; $('btn-pick').disabled = true; }
     if (!picking) {
       const last = state.history[state.history.length - 1];
       $('reveal-title').textContent = `Ronda ${last.round}: ${last.team}`;

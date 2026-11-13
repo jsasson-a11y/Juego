@@ -94,6 +94,7 @@ function createServer({ dataDir, options } = {}) {
     socket.on('room:settings', withRoom((s) => room.updateSettings(me.id, s)));
     socket.on('game:start', withRoom(() => room.start(me.id)));
     socket.on('pick:submit', withRoom(({ text }) => room.submit(me.id, text)));
+    socket.on('pick:pass', withRoom(() => room.pass(me.id)));
 
     socket.on('disconnect', () => {
       if (!room || !me || me.socketId !== socket.id) return;

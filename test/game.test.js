@@ -131,3 +131,16 @@ test('cuenta regresiva: el equipo no se ve hasta que empieza la ronda', () => {
   assert.equal(room.publicState(a.id).team.id, 'equipo-a');
   room.destroy();
 });
+
+test('pasar: suma 0 y cierra la ronda si todos eligieron', () => {
+  const { room, a, b } = setup();
+  room.start(a.id);
+  assert.equal(room.pass(a.id).status, 'pass');
+  assert.ok(room.pass(a.id).error, 'no puede pasar dos veces');
+  assert.ok(room.submit(a.id, 'Jugador Uno').error, 'después de pasar no puede elegir');
+  room.submit(b.id, 'Jugador Dos');
+  assert.equal(room.phase, 'reveal');
+  assert.equal(room.players.get(a.id).remaining, 1000);
+  assert.equal(room.history[0].entries.find((e) => e.playerId === a.id).status, 'pass');
+  room.destroy();
+});

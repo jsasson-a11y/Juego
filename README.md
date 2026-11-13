@@ -12,6 +12,7 @@ Cada ronda sale un equipo al azar. Todos los jugadores tienen **los segundos que
 | Ganador | El primero que llega a 0 **o se pasa** gana. Si varios llegan en la misma ronda, ganan todos (empate). Si se terminan las rondas, gana quien quedó más cerca de 0. |
 | Duplicados | Un futbolista que ya eligió alguien no se puede volver a elegir. Gana el que lo mandó primero. Al otro le avisa y puede probar con otro mientras le quede tiempo. |
 | Sin respuesta | Si se acaba el tiempo, suma 0. |
+| Pasar | Botón para cuando no se te ocurre nadie: esa ronda suma 0. |
 | No está en la base | No se acepta: avisa y deja probar con otro mientras quede tiempo. |
 | Errores de tipeo | Se toleran tildes, mayúsculas y errores comunes (ej: "neimar" → Neymar, "suares" → Suárez, "iguain" → Higuaín). Alcanza con el apellido si es único en ese equipo. |
 | Nombre ambiguo | Si lo escrito coincide con más de un jugador del equipo (ej: dos "Rodríguez"), pide ser más específico y deja reintentar. |
