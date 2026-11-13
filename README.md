@@ -36,7 +36,7 @@ Para jugar online hay que publicarlo en un servicio que soporte Node.js con WebS
 equipo_id;jugador;goles;alias;fuente
 ```
 
-  - `goles`: **todos los goles oficiales** con el club (no solo liga).
+  - `goles`: **todos los goles oficiales** con el club (no solo liga). En selecciones: goles en partidos oficiales internacionales de la selección mayor.
   - `alias`: otros nombres separados por `|` (ej: `Neymar Jr|Ney`).
   - `fuente`: de dónde salió el dato (URL).
 
