@@ -46,8 +46,6 @@
 
   {"id": "benfica", "name": "Benfica", "country": "Portugal", "league": "Primeira Liga"},
   {"id": "porto", "name": "Porto", "country": "Portugal", "league": "Primeira Liga"},
-  {"id": "sporting-cp", "name": "Sporting CP", "country": "Portugal", "league": "Primeira Liga"},
-  {"id": "braga", "name": "Braga", "country": "Portugal", "league": "Primeira Liga"},
 
   {"id": "seleccion-uruguay", "name": "Selección de Uruguay", "country": "Uruguay", "league": "Selecciones"},
   {"id": "seleccion-argentina", "name": "Selección de Argentina", "country": "Argentina", "league": "Selecciones"},

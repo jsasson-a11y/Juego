@@ -62,10 +62,10 @@ Reglas al combinar: si un nombre aparece repetido en un equipo se toma el valor 
 
 | Situación | Equipos |
 |---|---|
-| Lista amplia (cientos de jugadores, todas las competencias) | Clubes ingleses, Real Madrid, Inter, Roma, Bayern, Dortmund, Schalke, PSG, Lyon, Mónaco, Benfica, Sporting, Santos y la mayoría de las selecciones |
+| Lista amplia (cientos de jugadores, todas las competencias) | Clubes ingleses, Real Madrid, Inter, Roma, Bayern, Dortmund, Schalke, PSG, Lyon, Mónaco, Benfica, Santos y la mayoría de las selecciones |
 | Solo jugadores con 100+ partidos (~140-210) | Atlético de Madrid, Juventus, Milan, Marsella, Porto, Flamengo |
 | Solo máximos goleadores (40-130) | Corinthians, Palmeiras, São Paulo, Colombia |
 | **Solo goles de liga** (no todas las competencias) | Barcelona |
 | Lista parcial | Selección de España (165 con más partidos), Portugal (127) |
 | Bayern | Goles oficiales desde la Bundesliga (1963); no incluye la etapa anterior |
-| **Sin datos suficientes en Wikipedia (no se sortean)** | Peñarol, Nacional, Defensor Sporting, Danubio, Liverpool (Uy), Boca, River, Independiente, Racing, San Lorenzo, Estudiantes, Rosario Central, Sevilla, Braga |
+| **Sin datos suficientes en Wikipedia (no se sortean)** | Peñarol, Nacional, Defensor Sporting, Danubio, Liverpool (Uy), Boca, River, Independiente, Racing, San Lorenzo, Estudiantes, Rosario Central, Sevilla |
