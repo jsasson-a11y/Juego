@@ -21,8 +21,8 @@ function show(screen) {
 
 // --- Inicio ---
 fetch('/api/teams').then((r) => r.json()).then((teams) => {
-  const loaded = teams.filter((t) => t.players > 0).length;
-  $('data-status').textContent = `Equipos con datos cargados: ${loaded} de ${teams.length}.`;
+  const playable = teams.filter((t) => t.playable).length;
+  $('data-status').textContent = `Equipos en juego: ${playable} de ${teams.length}.`;
 }).catch(() => {});
 
 $('btn-create').onclick = () => {

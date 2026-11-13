@@ -10,6 +10,7 @@ const DEFAULTS = {
   maxRounds: 8,
   defaultRounds: 4,
   defaultTarget: 1000,
+  minPlayers: 20,     // equipos con menos jugadores cargados no se sortean
 };
 
 const MESSAGES = {
@@ -43,7 +44,7 @@ class Room {
   }
 
   playableTeams() {
-    return this.allTeams.filter((t) => t.players.length > 0);
+    return this.allTeams.filter((t) => t.players.length > 0 && t.players.length >= this.opts.minPlayers);
   }
 
   addPlayer(name) {

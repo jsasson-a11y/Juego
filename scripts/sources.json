@@ -1,0 +1,664 @@
+{
+ "manchester-united": [
+  {
+   "lang": "en",
+   "title": "List of Manchester United F.C. players"
+  },
+  {
+   "lang": "en",
+   "title": "List of Manchester United F.C. players (25–99 appearances)"
+  },
+  {
+   "lang": "en",
+   "title": "List of Manchester United F.C. players (1–24 appearances)"
+  }
+ ],
+ "liverpool": [
+  {
+   "lang": "en",
+   "title": "List of Liverpool F.C. players"
+  },
+  {
+   "lang": "en",
+   "title": "List of Liverpool F.C. players (25–99 appearances)"
+  },
+  {
+   "lang": "en",
+   "title": "List of Liverpool F.C. players (1–24 appearances)"
+  }
+ ],
+ "arsenal": [
+  {
+   "lang": "en",
+   "title": "List of Arsenal F.C. players"
+  },
+  {
+   "lang": "en",
+   "title": "List of Arsenal F.C. players (25–99 appearances)"
+  },
+  {
+   "lang": "en",
+   "title": "List of Arsenal F.C. players (1–24 appearances)"
+  }
+ ],
+ "chelsea": [
+  {
+   "lang": "en",
+   "title": "List of Chelsea F.C. players"
+  },
+  {
+   "lang": "en",
+   "title": "List of Chelsea F.C. players (25–99 appearances)"
+  },
+  {
+   "lang": "en",
+   "title": "List of Chelsea F.C. players (1–24 appearances)"
+  }
+ ],
+ "manchester-city": [
+  {
+   "lang": "en",
+   "title": "List of Manchester City F.C. players",
+   "tables": [
+    1,
+    2
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Manchester City F.C. players (25–99 appearances)",
+   "tables": [
+    1
+   ],
+   "goals_col": "Total goals"
+  },
+  {
+   "lang": "en",
+   "title": "List of Manchester City F.C. players (1–24 appearances)",
+   "tables": [
+    1
+   ],
+   "goals_col": "Total goals"
+  }
+ ],
+ "real-madrid": [
+  {
+   "lang": "en",
+   "title": "List of Real Madrid CF players",
+   "tables": [
+    2
+   ]
+  }
+ ],
+ "barcelona": [
+  {
+   "lang": "en",
+   "title": "List of FC Barcelona players",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "atletico-madrid": [
+  {
+   "lang": "en",
+   "title": "List of Atlético Madrid players",
+   "tables": [
+    0
+   ]
+  }
+ ],
+ "sevilla": [
+  {
+   "lang": "en",
+   "title": "Sevilla FC",
+   "tables": [
+    39
+   ]
+  }
+ ],
+ "juventus": [
+  {
+   "lang": "en",
+   "title": "List of Juventus FC players",
+   "tables": [
+    0
+   ]
+  }
+ ],
+ "milan": [
+  {
+   "lang": "en",
+   "title": "List of AC Milan players",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "inter": [
+  {
+   "lang": "en",
+   "title": "List of Inter Milan players",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Inter Milan players (25–99 appearances)",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "roma": [
+  {
+   "lang": "en",
+   "title": "List of AS Roma players",
+   "tables": [
+    0
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of AS Roma players (25–99 appearances)",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "bayern-munich": [
+  {
+   "lang": "de",
+   "title": "Liste der Fußballspieler des FC Bayern München",
+   "tables": [
+    0
+   ],
+   "name_col": "Spieler",
+   "goals_sum_re": " / T$"
+  }
+ ],
+ "borussia-dortmund": [
+  {
+   "lang": "en",
+   "title": "List of Borussia Dortmund players",
+   "tables": [
+    0
+   ]
+  }
+ ],
+ "schalke-04": [
+  {
+   "lang": "en",
+   "title": "List of FC Schalke 04 players",
+   "tables": [
+    1,
+    2
+   ]
+  }
+ ],
+ "psg": [
+  {
+   "lang": "en",
+   "title": "List of Paris Saint-Germain FC players",
+   "tables": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ],
+ "marseille": [
+  {
+   "lang": "en",
+   "title": "List of Olympique de Marseille players",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "lyon": [
+  {
+   "lang": "en",
+   "title": "List of Olympique Lyonnais players",
+   "tables": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ ],
+ "monaco": [
+  {
+   "lang": "fr",
+   "title": "Liste des joueurs de l'AS Monaco",
+   "tables": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+   ],
+   "name_col": "Nom",
+   "goals_col": "Total/B",
+   "goals_after_slash": true
+  }
+ ],
+ "benfica": [
+  {
+   "lang": "en",
+   "title": "List of S.L. Benfica players",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of S.L. Benfica players (25–99 appearances)",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "porto": [
+  {
+   "lang": "en",
+   "title": "List of FC Porto players",
+   "tables": [
+    0
+   ]
+  }
+ ],
+ "sporting-cp": [
+  {
+   "lang": "en",
+   "title": "List of Sporting CP players",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "flamengo": [
+  {
+   "lang": "en",
+   "title": "List of CR Flamengo players",
+   "tables": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "santos": [
+  {
+   "lang": "en",
+   "title": "List of Santos FC players",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "palmeiras": [
+  {
+   "lang": "pt",
+   "title": "Estatísticas da Sociedade Esportiva Palmeiras",
+   "tables": [
+    25
+   ]
+  }
+ ],
+ "sao-paulo": [
+  {
+   "lang": "pt",
+   "title": "Lista dos maiores artilheiros do São Paulo Futebol Clube",
+   "tables": [
+    0
+   ]
+  }
+ ],
+ "corinthians": [
+  {
+   "lang": "pt",
+   "title": "Artilheiros do Sport Club Corinthians Paulista",
+   "tables": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "boca-juniors": [
+  {
+   "lang": "es",
+   "title": "Anexo:Futbolistas del Club Atlético Boca Juniors",
+   "tables": [
+    74
+   ]
+  }
+ ],
+ "independiente": [
+  {
+   "lang": "es",
+   "title": "Club Atlético Independiente",
+   "tables": [
+    15
+   ],
+   "name_col": "Goleadores.1",
+   "goals_col": "Goleadores.2"
+  }
+ ],
+ "racing-club": [
+  {
+   "lang": "es",
+   "title": "Racing Club",
+   "tables": [
+    15
+   ]
+  }
+ ],
+ "san-lorenzo": [
+  {
+   "lang": "es",
+   "title": "Club Atlético San Lorenzo de Almagro",
+   "tables": [
+    6
+   ]
+  }
+ ],
+ "estudiantes": [
+  {
+   "lang": "es",
+   "title": "Club Estudiantes de La Plata",
+   "tables": [
+    9
+   ]
+  }
+ ],
+ "rosario-central": [
+  {
+   "lang": "es",
+   "title": "Club Atlético Rosario Central",
+   "tables": [
+    71
+   ]
+  }
+ ],
+ "river-plate": [
+  {
+   "lang": "es",
+   "title": "Club Atlético River Plate",
+   "tables": [
+    29
+   ],
+   "name_col": "Goleadores.1",
+   "goals_col": "Goleadores.2"
+  }
+ ],
+ "nacional": [
+  {
+   "lang": "es",
+   "title": "Club Nacional de Football",
+   "tables": [
+    19
+   ],
+   "name_col": "Máximos goleadores.1",
+   "goals_col": "Máximos goleadores.2"
+  }
+ ],
+ "seleccion-uruguay": [
+  {
+   "lang": "en",
+   "title": "List of Uruguay international footballers",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-argentina": [
+  {
+   "lang": "en",
+   "title": "List of Argentina international footballers",
+   "tables": [
+    3
+   ]
+  }
+ ],
+ "seleccion-brasil": [
+  {
+   "lang": "en",
+   "title": "List of Brazil international footballers",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Brazil international footballers (6–19 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Brazil international footballers (2–5 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Brazil international footballers (1 cap)",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-espana": [
+  {
+   "lang": "en",
+   "title": "List of Spain men's international footballers",
+   "tables": [
+    0
+   ]
+  }
+ ],
+ "seleccion-inglaterra": [
+  {
+   "lang": "en",
+   "title": "List of England international footballers",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of England international footballers (4–9 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of England international footballers (2–3 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of England international footballers with one cap",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-francia": [
+  {
+   "lang": "en",
+   "title": "List of France international footballers",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of France international footballers (1–4 caps)",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-alemania": [
+  {
+   "lang": "en",
+   "title": "List of Germany international footballers",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Germany international footballers (5–19 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Germany international footballers (1–4 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of East Germany international footballers",
+   "tables": [
+    0
+   ],
+   "combine": "sum"
+  }
+ ],
+ "seleccion-italia": [
+  {
+   "lang": "en",
+   "title": "List of Italy international footballers",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-portugal": [
+  {
+   "lang": "en",
+   "title": "List of Portugal international footballers",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-colombia": [
+  {
+   "lang": "en",
+   "title": "Colombia national football team records and statistics",
+   "tables": [
+    0,
+    2
+   ]
+  },
+  {
+   "lang": "es",
+   "title": "Selección de fútbol de Colombia",
+   "tables": [
+    9,
+    11
+   ]
+  }
+ ],
+ "seleccion-chile": [
+  {
+   "lang": "en",
+   "title": "List of Chile international footballers",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-belgica": [
+  {
+   "lang": "en",
+   "title": "List of Belgium international footballers",
+   "tables": [
+    2
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Belgium international footballers (5–20 caps)",
+   "tables": [
+    1
+   ]
+  },
+  {
+   "lang": "en",
+   "title": "List of Belgium international footballers (1–4 caps)",
+   "tables": [
+    1
+   ]
+  }
+ ],
+ "seleccion-paises-bajos": [
+  {
+   "lang": "en",
+   "title": "List of Netherlands international footballers",
+   "tables": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  }
+ ]
+}

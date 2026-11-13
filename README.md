@@ -43,4 +43,29 @@ equipo_id;jugador;goles;alias;fuente
 
 Al arrancar, el servidor valida el CSV y avisa en consola qué líneas tienen problemas. Solo se sortean equipos que tengan al menos un jugador cargado.
 
-> **Estado actual:** `goleadores.csv` está **vacío**. Los datos de `test/fixtures` son ficticios y solo se usan para las pruebas.
+Solo se sortean equipos con al menos **20 jugadores cargados** (configurable con la variable `MIN_PLAYERS`).
+
+### Cómo se generan los datos
+
+Los goles salen de Wikipedia. `scripts/sources.json` indica qué página y qué tabla se usa para cada equipo, y cada fila del CSV guarda el link exacto (con la versión de la página) de donde salió.
+
+```bash
+pip install -r scripts/requirements.txt
+python3 scripts/build_data.py            # regenera data/goleadores.csv
+python3 scripts/build_data.py arsenal    # revisa un equipo sin escribir el CSV
+python3 scripts/inspect_page.py en "List of FC Barcelona players"   # ver tablas de una página
+```
+
+Reglas al combinar: si un nombre aparece repetido en un equipo se toma el valor mayor; para la Selección de Alemania, los goles con Alemania Oriental se **suman**.
+
+### Cobertura y limitaciones conocidas
+
+| Situación | Equipos |
+|---|---|
+| Lista amplia (cientos de jugadores, todas las competencias) | Clubes ingleses, Real Madrid, Inter, Roma, Bayern, Dortmund, Schalke, PSG, Lyon, Mónaco, Benfica, Sporting, Santos y la mayoría de las selecciones |
+| Solo jugadores con 100+ partidos (~140-210) | Atlético de Madrid, Juventus, Milan, Marsella, Porto, Flamengo |
+| Solo máximos goleadores (40-130) | Corinthians, Palmeiras, São Paulo, Colombia |
+| **Solo goles de liga** (no todas las competencias) | Barcelona |
+| Lista parcial | Selección de España (165 con más partidos), Portugal (127) |
+| Bayern | Goles oficiales desde la Bundesliga (1963); no incluye la etapa anterior |
+| **Sin datos suficientes en Wikipedia (no se sortean)** | Peñarol, Nacional, Defensor Sporting, Danubio, Liverpool (Uy), Boca, River, Independiente, Racing, San Lorenzo, Estudiantes, Rosario Central, Sevilla, Braga |

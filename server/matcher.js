@@ -78,11 +78,17 @@ function buildKeys(player) {
     const full = normalize(raw);
     if (!full) continue;
     strong.add(full);
-    const tokens = full.split(' ').filter((t) => !STOPWORDS.has(t));
-    if (tokens.length > 1) {
-      const last = tokens[tokens.length - 1];
-      if (last.length >= 3) weak.add(last);
-      if (tokens.length > 2) weak.add(tokens.slice(-2).join(' '));
+    const all = full.split(' ');
+    if (all.length > 1) {
+      // Todos los "apellidos" posibles: "del piero", "piero"; "van basten", "basten".
+      for (let i = 1; i < all.length; i++) {
+        const tail = all.slice(i);
+        if (tail.every((t) => STOPWORDS.has(t))) continue;
+        const key = tail.join(' ');
+        if (key.replace(/ /g, '').length >= 3 && !STOPWORDS.has(tail[tail.length - 1])) weak.add(key);
+      }
+      // Nombre de pila (ej: "Cristiano", "Zlatan"). Si lo comparten varios, se pide ser más específico.
+      if (all[0].length >= 4 && !STOPWORDS.has(all[0])) weak.add(all[0]);
     }
   }
   for (const k of strong) weak.delete(k);

@@ -37,6 +37,12 @@ test('tolera errores de tipeo y fonética', () => {
   assert.equal(name('ibraimovich'), 'Zlatan Ibrahimović');
 });
 
+test('nombre de pila único alcanza', () => {
+  assert.equal(name('Cristiano'), 'Cristiano Ronaldo');
+  assert.equal(name('zlatan'), 'Zlatan Ibrahimović');
+  assert.equal(name('Leo'), 'notfound');
+});
+
 test('nombre exacto gana sobre apellido', () => {
   assert.equal(name('Ronaldo'), 'Ronaldo');
   assert.equal(name('Cristiano Ronaldo'), 'Cristiano Ronaldo');

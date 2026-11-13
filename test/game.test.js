@@ -17,7 +17,7 @@ const teams = [
 ];
 
 function setup(target = 1000, rounds = 4) {
-  const room = new Room({ code: 'TEST', teams, options: { pickMs: 60_000, revealMs: 60_000 }, random: () => 0 });
+  const room = new Room({ code: 'TEST', teams, options: { pickMs: 60_000, revealMs: 60_000, minPlayers: 1 }, random: () => 0 });
   const a = room.addPlayer('Ana').player;
   const b = room.addPlayer('Beto').player;
   assert.deepEqual(room.updateSettings(a.id, { rounds, target }), { ok: true });
@@ -81,6 +81,11 @@ test('sin respuesta al terminar el tiempo suma 0 y al final gana el más cercano
   assert.equal(room.players.get(b.id).remaining, 5000);
   assert.deepEqual(room.winners, [a.id]);
   room.destroy();
+});
+
+test('no sortea equipos con menos jugadores que el mínimo', () => {
+  const room = new Room({ code: 'X', teams, options: { minPlayers: 4 } });
+  assert.deepEqual(room.playableTeams().map((t) => t.id), ['equipo-a']);
 });
 
 test('no deja empezar sin datos', () => {

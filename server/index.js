@@ -4,19 +4,23 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const { Server } = require('socket.io');
-const { Room } = require('./game');
+const { Room, DEFAULTS } = require('./game');
 const { loadData } = require('./data');
 
 function createServer({ dataDir, options } = {}) {
   const { teams, errors } = loadData(dataDir);
   for (const e of errors) console.warn('[datos]', e);
-  const loaded = teams.filter((t) => t.players.length > 0);
-  console.log(`[datos] ${loaded.length}/${teams.length} equipos con jugadores cargados`);
+  const minPlayers = options?.minPlayers ?? DEFAULTS.minPlayers;
+  const playable = teams.filter((t) => t.players.length > 0 && t.players.length >= minPlayers);
+  console.log(`[datos] ${playable.length}/${teams.length} equipos en juego (mínimo ${minPlayers} jugadores cargados)`);
 
   const app = express();
   app.use(express.static(path.join(__dirname, '..', 'public')));
   app.get('/api/teams', (_req, res) => {
-    res.json(teams.map((t) => ({ id: t.id, name: t.name, country: t.country, league: t.league, players: t.players.length })));
+    res.json(teams.map((t) => ({
+      id: t.id, name: t.name, country: t.country, league: t.league,
+      players: t.players.length, playable: t.players.length > 0 && t.players.length >= minPlayers,
+    })));
   });
 
   const server = http.createServer(app);
@@ -101,7 +105,8 @@ function createServer({ dataDir, options } = {}) {
 
 if (require.main === module) {
   const port = Number(process.env.PORT) || 3000;
-  const { server } = createServer({ dataDir: process.env.DATA_DIR });
+  const options = process.env.MIN_PLAYERS ? { minPlayers: Number(process.env.MIN_PLAYERS) } : undefined;
+  const { server } = createServer({ dataDir: process.env.DATA_DIR, options });
   server.listen(port, () => console.log(`Juego escuchando en http://localhost:${port}`));
 }
 
