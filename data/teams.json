@@ -57,5 +57,9 @@
   {"id": "seleccion-francia", "name": "Selección de Francia", "country": "Francia", "league": "Selecciones"},
   {"id": "seleccion-alemania", "name": "Selección de Alemania", "country": "Alemania", "league": "Selecciones"},
   {"id": "seleccion-italia", "name": "Selección de Italia", "country": "Italia", "league": "Selecciones"},
-  {"id": "seleccion-portugal", "name": "Selección de Portugal", "country": "Portugal", "league": "Selecciones"}
+  {"id": "seleccion-portugal", "name": "Selección de Portugal", "country": "Portugal", "league": "Selecciones"},
+  {"id": "seleccion-colombia", "name": "Selección de Colombia", "country": "Colombia", "league": "Selecciones"},
+  {"id": "seleccion-chile", "name": "Selección de Chile", "country": "Chile", "league": "Selecciones"},
+  {"id": "seleccion-belgica", "name": "Selección de Bélgica", "country": "Bélgica", "league": "Selecciones"},
+  {"id": "seleccion-paises-bajos", "name": "Selección de Países Bajos", "country": "Países Bajos", "league": "Selecciones"}
 ]

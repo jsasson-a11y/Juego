@@ -15,6 +15,7 @@ Cada ronda sale un equipo al azar. Todos los jugadores tienen **10 segundos** pa
 | No está en la base | Suma 0 y se termina su turno. |
 | Errores de tipeo | Se toleran tildes, mayúsculas y errores comunes (ej: "neimar" → Neymar, "suares" → Suárez, "iguain" → Higuaín). Alcanza con el apellido si es único en ese equipo. |
 | Nombre ambiguo | Si lo escrito coincide con más de un jugador del equipo (ej: dos "Rodríguez"), pide ser más específico y deja reintentar. |
+| Club y selección | Son independientes: elegir a un futbolista en un club no lo bloquea para su selección (y viceversa). |
 | Equipos | No se repite un equipo dentro de la misma partida, salvo que se acaben los equipos con datos. |
 
 ## Cómo correrlo
@@ -36,7 +37,7 @@ Para jugar online hay que publicarlo en un servicio que soporte Node.js con WebS
 equipo_id;jugador;goles;alias;fuente
 ```
 
-  - `goles`: **todos los goles oficiales** con el club (no solo liga). En selecciones: goles en partidos oficiales internacionales de la selección mayor.
+  - `goles`: **todos los goles oficiales** con el club (no solo liga). En selecciones: goles con la selección mayor en todos los partidos internacionales, amistosos incluidos (sin juveniles ni Juegos Olímpicos). En Alemania se suman los goles con Alemania Federal y Alemania Oriental.
   - `alias`: otros nombres separados por `|` (ej: `Neymar Jr|Ney`).
   - `fuente`: de dónde salió el dato (URL).
 
