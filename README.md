@@ -43,7 +43,7 @@ equipo_id;jugador;goles;alias;fuente
 
 Al arrancar, el servidor valida el CSV y avisa en consola qué líneas tienen problemas. Solo se sortean equipos que tengan al menos un jugador cargado.
 
-Solo se sortean equipos con al menos **20 jugadores cargados** (configurable con la variable `MIN_PLAYERS`).
+Se sortea todo equipo con al menos un jugador cargado (el mínimo se puede subir con la variable `MIN_PLAYERS`).
 
 ### Cómo se generan los datos
 

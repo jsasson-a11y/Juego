@@ -10,7 +10,7 @@ const DEFAULTS = {
   maxRounds: 8,
   defaultRounds: 4,
   defaultTarget: 1000,
-  minPlayers: 20,     // equipos con menos jugadores cargados no se sortean
+  minPlayers: 1,      // mínimo de jugadores cargados para que un equipo se sortee (MIN_PLAYERS)
 };
 
 const MESSAGES = {
