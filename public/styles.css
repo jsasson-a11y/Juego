@@ -36,7 +36,8 @@ button:disabled { opacity: .5; cursor: default; }
 .players li.winner { border-color: var(--accent); }
 .players .num { font-variant-numeric: tabular-nums; font-weight: 700; }
 .tag { font-size: .75rem; color: var(--muted); margin-left: 6px; }
-.settings { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.settings { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+.settings label:last-child { grid-column: 1 / -1; }
 .round-info { display: flex; justify-content: space-between; color: var(--muted); }
 .timer { font-size: 1.6rem; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; }
 .timer.low { color: var(--warn); }

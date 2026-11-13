@@ -1,6 +1,6 @@
 # Goleadores (juego multijugador online)
 
-Cada ronda sale un equipo al azar. Todos los jugadores tienen **10 segundos** para escribir el nombre de un futbolista de ese equipo, y se restan los goles que ese futbolista hizo en el club.
+Cada ronda sale un equipo al azar. Todos los jugadores tienen **los segundos que elija el anfitrión** para escribir el nombre de un futbolista de ese equipo, y se restan los goles que ese futbolista hizo en el club.
 
 ## Reglas implementadas
 
@@ -8,11 +8,11 @@ Cada ronda sale un equipo al azar. Todos los jugadores tienen **10 segundos** pa
 |---|---|
 | Rondas | Entre 4 y 8 (la elige el anfitrión). |
 | Objetivo | 1000 goles por defecto (se puede cambiar). Todos arrancan con el mismo objetivo y cada uno lleva su propia cuenta. |
-| Turnos | Simultáneos: todos juegan con el mismo equipo y tienen los mismos 10 segundos. |
+| Turnos | Simultáneos: todos juegan con el mismo equipo y el mismo tiempo. El anfitrión elige los segundos por ronda: 10, 15, 20 (por defecto), 30, 45 o 60. Antes de cada ronda hay una cuenta regresiva de 3 segundos. |
 | Ganador | El primero que llega a 0 **o se pasa** gana. Si varios llegan en la misma ronda, ganan todos (empate). Si se terminan las rondas, gana quien quedó más cerca de 0. |
 | Duplicados | Un futbolista que ya eligió alguien no se puede volver a elegir. Gana el que lo mandó primero. Al otro le avisa y puede probar con otro mientras le quede tiempo. |
 | Sin respuesta | Si se acaba el tiempo, suma 0. |
-| No está en la base | Suma 0 y se termina su turno. |
+| No está en la base | No se acepta: avisa y deja probar con otro mientras quede tiempo. |
 | Errores de tipeo | Se toleran tildes, mayúsculas y errores comunes (ej: "neimar" → Neymar, "suares" → Suárez, "iguain" → Higuaín). Alcanza con el apellido si es único en ese equipo. |
 | Nombre ambiguo | Si lo escrito coincide con más de un jugador del equipo (ej: dos "Rodríguez"), pide ser más específico y deja reintentar. |
 | Club y selección | Son independientes: elegir a un futbolista en un club no lo bloquea para su selección (y viceversa). |

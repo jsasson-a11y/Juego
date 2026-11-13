@@ -66,12 +66,15 @@ socket.on('session', (s) => store.set(s));
 // --- Sala ---
 const rounds = $('set-rounds');
 const sendSettings = () => {
-  socket.emit('room:settings', { rounds: Number(rounds.value), target: Number($('set-target').value) }, (res) => {
+  socket.emit('room:settings', {
+    rounds: Number(rounds.value), target: Number($('set-target').value), pickSeconds: Number($('set-seconds').value),
+  }, (res) => {
     $('lobby-error').textContent = res.error || '';
   });
 };
 rounds.onchange = sendSettings;
 $('set-target').onchange = sendSettings;
+$('set-seconds').onchange = sendSettings;
 $('btn-start').onclick = () => socket.emit('game:start', {}, (res) => { $('lobby-error').textContent = res.error || ''; });
 $('btn-again').onclick = () => socket.emit('game:start', {}, (res) => { $('final-error').textContent = res.error || ''; });
 
@@ -171,6 +174,11 @@ function render() {
     }
     rounds.value = String(state.settings.rounds);
     if (document.activeElement !== $('set-target')) $('set-target').value = state.settings.target;
+    if (!$('set-seconds').options.length) {
+      for (const sec of state.limits.pickSeconds) $('set-seconds').add(new Option(`${sec} s`, String(sec)));
+    }
+    $('set-seconds').value = String(state.settings.pickSeconds);
+    $('set-seconds').disabled = !isHost;
     rounds.disabled = !isHost;
     $('set-target').disabled = !isHost;
     $('btn-start').classList.toggle('hidden', !isHost);
@@ -198,7 +206,7 @@ function render() {
   if (state.phase === 'picking' || state.phase === 'reveal') {
     show('game');
     $('countdown').classList.add('hidden');
-    $('game-round').textContent = `Ronda ${state.round} de ${state.settings.rounds}`;
+    $('game-round').textContent = `Ronda ${state.round} de ${state.settings.rounds} · ${state.settings.pickSeconds} s`;
     $('team-badge').innerHTML = badge(state.team.id, 'big');
     $('team-name').textContent = state.team.name;
     $('team-league').textContent = state.team.league;

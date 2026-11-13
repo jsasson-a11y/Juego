@@ -40,11 +40,25 @@ test('ronda: resta goles, bloquea duplicados y no encontrados suman 0', () => {
   const dup = room.submit(b.id, 'Jugador Uno');
   assert.equal(dup.status, 'taken');
   assert.equal(dup.retry, true);
-  assert.equal(room.submit(b.id, 'Pelé').status, 'notfound');
+  const nf = room.submit(b.id, 'Pelé');
+  assert.equal(nf.status, 'notfound');
+  assert.equal(nf.retry, true, 'si no está en la base puede volver a intentar');
+  assert.equal(room.phase, 'picking');
+  assert.equal(room.submit(b.id, 'Otro Tres').status, 'found');
   // Todos eligieron: la ronda termina sola.
   assert.equal(room.phase, 'reveal');
   assert.equal(room.players.get(a.id).remaining, 700);
-  assert.equal(room.players.get(b.id).remaining, 1000);
+  assert.equal(room.players.get(b.id).remaining, 950);
+  room.destroy();
+});
+
+test('segundos por ronda configurables (solo valores permitidos)', () => {
+  const { room, a } = setup();
+  assert.ok(room.updateSettings(a.id, { rounds: 4, target: 1000, pickSeconds: 7 }).error);
+  assert.deepEqual(room.updateSettings(a.id, { rounds: 4, target: 1000, pickSeconds: 30 }), { ok: true });
+  assert.equal(room.settings.pickSeconds, 30);
+  room.start(a.id);
+  assert.equal(room.deadline - Date.now() > 29_000, true);
   room.destroy();
 });
 

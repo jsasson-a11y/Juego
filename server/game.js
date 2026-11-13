@@ -4,19 +4,20 @@ const crypto = require('crypto');
 const { findPlayer } = require('./matcher');
 
 const DEFAULTS = {
-  pickMs: 10_000,     // tiempo para elegir jugador
   revealMs: 6_000,    // tiempo mostrando resultados de la ronda
   countdownMs: 3_000, // cuenta regresiva antes de cada ronda
   minRounds: 4,
   maxRounds: 8,
   defaultRounds: 4,
   defaultTarget: 1000,
+  pickSecondsOptions: [10, 15, 20, 30, 45, 60],
+  defaultPickSeconds: 20,
   minPlayers: 1,      // mínimo de jugadores cargados para que un equipo se sortee (MIN_PLAYERS)
 };
 
 const MESSAGES = {
   found: (name, goals) => `${name}: ${goals} goles`,
-  notfound: 'No está en la base de este equipo: suma 0',
+  notfound: 'Ese jugador no está en la base de este equipo. Probá con otro.',
   ambiguous: 'Hay más de un jugador con ese nombre. Sé más específico.',
   taken: (by) => `Ese jugador ya lo eligió ${by}. Probá con otro.`,
 };
@@ -31,7 +32,12 @@ class Room {
     this.onChange = onChange;
     this.players = new Map(); // id -> { id, token, name, remaining, connected, picks: [] }
     this.hostId = null;
-    this.settings = { rounds: this.opts.defaultRounds, target: this.opts.defaultTarget };
+    this.settings = {
+      rounds: this.opts.defaultRounds,
+      target: this.opts.defaultTarget,
+      // pickMs en las opciones (pruebas) tiene prioridad sobre el valor por defecto.
+      pickSeconds: options.pickMs ? options.pickMs / 1000 : this.opts.defaultPickSeconds,
+    };
     this.phase = 'lobby'; // lobby | countdown | picking | reveal | finished
     this.round = 0;
     this.team = null;
@@ -88,7 +94,7 @@ class Room {
     return ![...this.players.values()].some((p) => p.connected);
   }
 
-  updateSettings(byId, { rounds, target }) {
+  updateSettings(byId, { rounds, target, pickSeconds }) {
     if (byId !== this.hostId) return { error: 'Solo el anfitrión puede cambiar la configuración.' };
     if (this.phase !== 'lobby' && this.phase !== 'finished') return { error: 'No se puede cambiar durante la partida.' };
     const r = Number(rounds);
@@ -97,7 +103,11 @@ class Room {
       return { error: `Las rondas deben ser entre ${this.opts.minRounds} y ${this.opts.maxRounds}.` };
     }
     if (!Number.isInteger(t) || t < 1 || t > 99999) return { error: 'El objetivo de goles debe ser un número entre 1 y 99999.' };
-    this.settings = { rounds: r, target: t };
+    const secs = pickSeconds === undefined ? this.settings.pickSeconds : Number(pickSeconds);
+    if (pickSeconds !== undefined && !this.opts.pickSecondsOptions.includes(secs)) {
+      return { error: `Los segundos por ronda deben ser uno de: ${this.opts.pickSecondsOptions.join(', ')}.` };
+    }
+    this.settings = { rounds: r, target: t, pickSeconds: secs };
     for (const p of this.players.values()) p.remaining = t;
     this.changed();
     return { ok: true };
@@ -146,8 +156,9 @@ class Room {
 
   startPicking() {
     this.phase = 'picking';
-    this.deadline = this.now() + this.opts.pickMs;
-    this.setTimer(this.opts.pickMs, () => this.endRound());
+    const ms = this.settings.pickSeconds * 1000;
+    this.deadline = this.now() + ms;
+    this.setTimer(ms, () => this.endRound());
     this.changed();
   }
 
@@ -162,25 +173,18 @@ class Room {
 
     const res = findPlayer(this.team.index, input);
     if (res.status === 'ambiguous') return { status: 'ambiguous', message: MESSAGES.ambiguous, retry: true };
-    let result;
-    if (res.status === 'notfound') {
-      result = { status: 'notfound', input, goals: 0 };
-    } else {
-      const key = `${this.team.id}:${res.index}`;
-      const holder = this.taken.get(key);
-      const fp = this.team.players[res.index];
-      if (holder) return { status: 'taken', message: MESSAGES.taken(holder), retry: true };
-      this.taken.set(key, p.name);
-      result = { status: 'found', input, footballer: fp.name, goals: fp.goals };
-    }
+    // Si no está en la base no se acepta: se puede probar con otro mientras quede tiempo.
+    if (res.status === 'notfound') return { status: 'notfound', message: MESSAGES.notfound, retry: true };
+    const key = `${this.team.id}:${res.index}`;
+    const holder = this.taken.get(key);
+    const fp = this.team.players[res.index];
+    if (holder) return { status: 'taken', message: MESSAGES.taken(holder), retry: true };
+    this.taken.set(key, p.name);
+    const result = { status: 'found', input, footballer: fp.name, goals: fp.goals };
     this.roundPicks.set(byId, result);
     this.changed();
     this.maybeEndRoundEarly();
-    return {
-      status: result.status,
-      message: result.status === 'found' ? MESSAGES.found(result.footballer, result.goals) : MESSAGES.notfound,
-      retry: false,
-    };
+    return { status: 'found', message: MESSAGES.found(result.footballer, result.goals), retry: false };
   }
 
   maybeEndRoundEarly() {
@@ -248,7 +252,7 @@ class Room {
       you: forId,
       hostId: this.hostId,
       settings: this.settings,
-      limits: { minRounds: this.opts.minRounds, maxRounds: this.opts.maxRounds },
+      limits: { minRounds: this.opts.minRounds, maxRounds: this.opts.maxRounds, pickSeconds: this.opts.pickSecondsOptions },
       phase: this.phase,
       round: this.round,
       team: this.team && this.phase !== 'countdown'
