@@ -55,6 +55,8 @@ def fetch(url, site, delay=1.6, encoding=None, tries=3, data=None, cache_tag='')
     key = re.sub(r'[^A-Za-z0-9_.-]+', '_', url.split('://', 1)[-1])[:150]
     key += '_' + hashlib.sha1((url + (data or '') + cache_tag).encode()).hexdigest()[:10] + '.html'
     path = cache / key
+    # Codificar caracteres no ASCII de la URL (p. ej. 'Ángel' en la ruta) para urllib.
+    url = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%~")
     if path.exists():
         raw = path.read_bytes()
     else:
@@ -83,7 +85,8 @@ def fetch(url, site, delay=1.6, encoding=None, tries=3, data=None, cache_tag='')
                     raise
                 time.sleep(5 * (attempt + 1))
         low = raw[:5000].lower()
-        if b'just a moment' in low and b'challenge' in raw.lower():
+        if (b'just a moment' in low and b'challenge' in raw.lower()) or b'<title>one moment, please' in low:
+            # Página de verificación anti-bots: no se guarda ni se intenta sortear.
             raise Blocked(f'desafío anti-bots en {url}')
         path.write_bytes(raw)
     if encoding:

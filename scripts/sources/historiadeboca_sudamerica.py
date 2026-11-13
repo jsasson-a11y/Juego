@@ -41,26 +41,81 @@ def parse_player(html):
     return name, goals
 
 
+RANKING = BASE + 'records-jugadores/50/1/0/1905/2026/6/0/0.html'  # top 50 "Más goles", solo oficiales
+CHALLENGED = ROOT / '.cache' / SITE / '_desafio_antibots.txt'
+
+
+def player_id(url):
+    m = re.search(r'/jugadores/[^/]+/(\d+)/', url)
+    return m.group(1) if m else None
+
+
+def ranking_rows():
+    """Top 50 goleadores oficiales (para cubrir fichas que no se pudieron descargar)."""
+    s = BeautifulSoup(fetch(RANKING, SITE, delay=1.8), 'lxml')
+    out = {}
+    for tr in s.find_all('tr'):
+        tds = tr.find_all('td')
+        a = tr.find('a', href=re.compile(r'/jugadores/'))
+        if not a or len(tds) < 3:
+            continue
+        nums = [td.get_text(strip=True) for td in tds if td.get_text(strip=True).isdigit()]
+        if len(nums) < 2:
+            continue
+        pid = player_id(a['href'])
+        name = re.sub(r'^Partidos y Goles de\s+', '', a.get('title') or a.get_text(' ', strip=True)).strip()
+        if not name or name.lower().startswith('partidos y goles'):
+            name = tds[1].get_text(' ', strip=True)
+        out[pid] = (name, int(nums[0]))
+    return out
+
+
 def main():
     urls = player_urls()
-    print(f'{len(urls)} fichas de jugador', file=sys.stderr)
-    rows = []
+    challenged = set(CHALLENGED.read_text().split()) if CHALLENGED.exists() else set()
+    print(f'{len(urls)} fichas de jugador; {len(challenged)} omitidas por desafío anti-bots previo', file=sys.stderr)
+    rows, seen_ids = [], set()
+    consecutive = 0
     for i, url in enumerate(urls, 1):
+        if url in challenged:
+            continue
         try:
             html = fetch(url, SITE, delay=1.8)
+            consecutive = 0
         except Blocked as e:
-            print('BLOQUEADO:', e, file=sys.stderr)
-            break
+            # El sitio a veces responde con una página "One moment, please..." (verificación anti-bots).
+            # No se reintenta ni se sortea: se anota la URL y se sigue; si se repite mucho, se abandona.
+            print('desafío/bloqueo:', e, file=sys.stderr)
+            challenged.add(url)
+            CHALLENGED.write_text('\n'.join(sorted(challenged)))
+            consecutive += 1
+            if consecutive >= 5:
+                print('demasiados bloqueos seguidos: se detiene la descarga', file=sys.stderr)
+                break
+            continue
         except Exception as e:  # noqa: BLE001
             print('error', url, e, file=sys.stderr)
             continue
         name, goals = parse_player(html)
         if i % 100 == 0:
             print(i, name, goals, file=sys.stderr)
-        if not name or goals is None or goals <= 0:
+        if not name or goals is None:
+            continue
+        seen_ids.add(player_id(url))
+        if goals <= 0:
             continue
         rows.append({'equipo_id': 'boca-juniors', 'jugador': name, 'goles': goals,
                      'alias': short_alias(name), 'fuente': url, 'fecha_dato': '', 'nota': NOTA})
+    added = 0
+    try:
+        for pid, (name, goals) in ranking_rows().items():
+            if pid not in seen_ids and goals > 0:
+                rows.append({'equipo_id': 'boca-juniors', 'jugador': name, 'goles': goals,
+                             'alias': short_alias(name), 'fuente': RANKING, 'fecha_dato': '', 'nota': NOTA})
+                added += 1
+    except Blocked as e:
+        print('ranking no disponible:', e, file=sys.stderr)
+    print(f'{added} jugadores añadidos desde el ranking top 50', file=sys.stderr)
     rows.sort(key=lambda r: (-r['goles'], r['jugador']))
     out = write_csv(ROOT / 'data' / 'sources' / 'historiadeboca_sudamerica.csv', rows)
     print(f'{len(rows)} filas -> {out}', file=sys.stderr)

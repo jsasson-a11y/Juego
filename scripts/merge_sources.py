@@ -246,7 +246,7 @@ def main():
             out.append({
                 'equipo_id': tid, 'jugador': p.name, 'goles': vals[best_src],
                 'alias': '|'.join(sorted(p.aliases)), 'fuente': p.urls[best_src],
-                'validacion': status, 'detalle': '; '.join(f'{s}={v}' for s, v in sorted(vals.items())),
+                'validacion': status, 'detalle': ', '.join(f'{s}={v}' for s, v in sorted(vals.items())),
             })
         summary.append((tid, len(players), dict(counts)))
 

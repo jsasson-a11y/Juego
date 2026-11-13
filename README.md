@@ -47,25 +47,20 @@ Solo se sortean equipos con al menos **20 jugadores cargados** (configurable con
 
 ### Cómo se generan los datos
 
-Los goles salen de Wikipedia. `scripts/sources.json` indica qué página y qué tabla se usa para cada equipo, y cada fila del CSV guarda el link exacto (con la versión de la página) de donde salió.
+Cada fuente queda en su propio archivo en `data/sources/` y `scripts/merge_sources.py` las combina en `data/goleadores.csv`:
+
+- Si dos fuentes difieren, se usa el número **más alto**. Si hay una sola, se usa esa.
+- Las filas marcadas "solo liga" se descartan (se piden goles totales).
+- Cada jugador queda con `validacion` (`coinciden`, `difieren`, `una_fuente`) y `detalle` (goles según cada fuente) para poder revisarlo.
+- `data/sources/excluidas/` guarda fuentes descartadas y el motivo.
 
 ```bash
 pip install -r scripts/requirements.txt
-python3 scripts/build_data.py            # regenera data/goleadores.csv
-python3 scripts/build_data.py arsenal    # revisa un equipo sin escribir el CSV
-python3 scripts/inspect_page.py en "List of FC Barcelona players"   # ver tablas de una página
+python3 scripts/build_data.py                 # Wikipedia -> data/sources/wikipedia.csv
+python3 scripts/sources/<fuente>.py           # cada segunda fuente -> data/sources/<fuente>.csv
+python3 scripts/merge_sources.py [-v]         # combina todo -> data/goleadores.csv
 ```
 
-Reglas al combinar: si un nombre aparece repetido en un equipo se toma el valor mayor; para la Selección de Alemania, los goles con Alemania Oriental se **suman**.
+Fuentes usadas además de Wikipedia: RSSSF (selecciones), Comisión de Historia de Peñarol (1891.uy), Comisión de Historia de Nacional (atilio.uy), historiadeboca.com.ar, SPFCpédia (São Paulo), ranking oficial de Palmeiras, lfchistory.net, mufcinfo.com, asromaultras.org, magliarossonera.it, histoiredupsg.fr, sitios oficiales de Arsenal, Chelsea, Inter y Barcelona, footballfacts.co.uk.
 
-### Cobertura y limitaciones conocidas
-
-| Situación | Equipos |
-|---|---|
-| Lista amplia (cientos de jugadores, todas las competencias) | Clubes ingleses, Real Madrid, Inter, Roma, Bayern, Dortmund, Schalke, PSG, Lyon, Mónaco, Benfica, Santos y la mayoría de las selecciones |
-| Solo jugadores con 100+ partidos (~140-210) | Atlético de Madrid, Juventus, Milan, Marsella, Porto, Flamengo |
-| Solo máximos goleadores (40-130) | Corinthians, Palmeiras, São Paulo, Colombia |
-| **Solo goles de liga** (no todas las competencias) | Barcelona |
-| Lista parcial | Selección de España (165 con más partidos), Portugal (127) |
-| Bayern | Goles oficiales desde la Bundesliga (1963); no incluye la etapa anterior |
-| **Sin datos suficientes en Wikipedia (no se sortean)** | Peñarol, Nacional, Defensor Sporting, Danubio, Liverpool (Uy), Boca, River, Independiente, Racing, San Lorenzo, Estudiantes, Rosario Central, Sevilla |
+Solo se usan sitios que permiten el acceso automático (robots.txt y condiciones); los que bloquean bots o sistemas de IA no se usan.
