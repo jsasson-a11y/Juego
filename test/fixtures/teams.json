@@ -1,0 +1,4 @@
+[
+  { "id": "prueba", "name": "Equipo de Prueba", "country": "Test", "league": "Test" },
+  { "id": "sin-datos", "name": "Sin Datos", "country": "Test", "league": "Test" }
+]

@@ -1,0 +1,32 @@
+{
+  "name": "goleadores",
+  "version": "1.0.0",
+  "description": "Juego multijugador online de goleadores de fútbol",
+  "main": "server/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsasson-a11y/Juego.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsasson-a11y/Juego/issues"
+  },
+  "homepage": "https://github.com/jsasson-a11y/Juego#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}

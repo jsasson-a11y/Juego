@@ -1,0 +1,51 @@
+[
+  { "id": "penarol", "name": "Peñarol", "country": "Uruguay", "league": "Uruguay" },
+  { "id": "nacional", "name": "Nacional", "country": "Uruguay", "league": "Uruguay" },
+  { "id": "defensor-sporting", "name": "Defensor Sporting", "country": "Uruguay", "league": "Uruguay" },
+  { "id": "danubio", "name": "Danubio", "country": "Uruguay", "league": "Uruguay" },
+  { "id": "liverpool-uy", "name": "Liverpool (Montevideo)", "country": "Uruguay", "league": "Uruguay" },
+
+  { "id": "boca-juniors", "name": "Boca Juniors", "country": "Argentina", "league": "Argentina" },
+  { "id": "river-plate", "name": "River Plate", "country": "Argentina", "league": "Argentina" },
+  { "id": "independiente", "name": "Independiente", "country": "Argentina", "league": "Argentina" },
+  { "id": "racing-club", "name": "Racing Club", "country": "Argentina", "league": "Argentina" },
+  { "id": "san-lorenzo", "name": "San Lorenzo", "country": "Argentina", "league": "Argentina" },
+  { "id": "estudiantes", "name": "Estudiantes de La Plata", "country": "Argentina", "league": "Argentina" },
+  { "id": "rosario-central", "name": "Rosario Central", "country": "Argentina", "league": "Argentina" },
+
+  { "id": "flamengo", "name": "Flamengo", "country": "Brasil", "league": "Brasil" },
+  { "id": "corinthians", "name": "Corinthians", "country": "Brasil", "league": "Brasil" },
+  { "id": "palmeiras", "name": "Palmeiras", "country": "Brasil", "league": "Brasil" },
+  { "id": "sao-paulo", "name": "São Paulo", "country": "Brasil", "league": "Brasil" },
+  { "id": "santos", "name": "Santos", "country": "Brasil", "league": "Brasil" },
+
+  { "id": "manchester-united", "name": "Manchester United", "country": "Inglaterra", "league": "Premier League" },
+  { "id": "liverpool", "name": "Liverpool", "country": "Inglaterra", "league": "Premier League" },
+  { "id": "arsenal", "name": "Arsenal", "country": "Inglaterra", "league": "Premier League" },
+  { "id": "chelsea", "name": "Chelsea", "country": "Inglaterra", "league": "Premier League" },
+
+  { "id": "real-madrid", "name": "Real Madrid", "country": "España", "league": "LaLiga" },
+  { "id": "barcelona", "name": "Barcelona", "country": "España", "league": "LaLiga" },
+  { "id": "atletico-madrid", "name": "Atlético de Madrid", "country": "España", "league": "LaLiga" },
+  { "id": "sevilla", "name": "Sevilla", "country": "España", "league": "LaLiga" },
+
+  { "id": "juventus", "name": "Juventus", "country": "Italia", "league": "Serie A" },
+  { "id": "milan", "name": "Milan", "country": "Italia", "league": "Serie A" },
+  { "id": "inter", "name": "Inter", "country": "Italia", "league": "Serie A" },
+  { "id": "roma", "name": "Roma", "country": "Italia", "league": "Serie A" },
+
+  { "id": "bayern-munich", "name": "Bayern Múnich", "country": "Alemania", "league": "Bundesliga" },
+  { "id": "borussia-dortmund", "name": "Borussia Dortmund", "country": "Alemania", "league": "Bundesliga" },
+  { "id": "schalke-04", "name": "Schalke 04", "country": "Alemania", "league": "Bundesliga" },
+  { "id": "bayer-leverkusen", "name": "Bayer Leverkusen", "country": "Alemania", "league": "Bundesliga" },
+
+  { "id": "psg", "name": "Paris Saint-Germain", "country": "Francia", "league": "Ligue 1" },
+  { "id": "marseille", "name": "Olympique de Marsella", "country": "Francia", "league": "Ligue 1" },
+  { "id": "lyon", "name": "Olympique de Lyon", "country": "Francia", "league": "Ligue 1" },
+  { "id": "monaco", "name": "Mónaco", "country": "Francia", "league": "Ligue 1" },
+
+  { "id": "benfica", "name": "Benfica", "country": "Portugal", "league": "Primeira Liga" },
+  { "id": "porto", "name": "Porto", "country": "Portugal", "league": "Primeira Liga" },
+  { "id": "sporting-cp", "name": "Sporting CP", "country": "Portugal", "league": "Primeira Liga" },
+  { "id": "braga", "name": "Braga", "country": "Portugal", "league": "Primeira Liga" }
+]

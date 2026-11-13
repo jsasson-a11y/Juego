@@ -1,0 +1,101 @@
+'use strict';
+
+// OJO: equipos y goles de este archivo son de prueba, NO datos reales.
+const test = require('node:test');
+const assert = require('node:assert');
+const { Room } = require('../server/game');
+const { indexTeam } = require('../server/matcher');
+
+function makeTeam(id, players) {
+  return { id, name: id, country: 'X', league: 'X', players, index: indexTeam(players) };
+}
+
+const teams = [
+  makeTeam('equipo-a', [{ name: 'Jugador Uno', goals: 300 }, { name: 'Jugador Dos', goals: 200 }, { name: 'Otro Tres', goals: 50 }, { name: 'Pedro Pérez', goals: 10 }, { name: 'Juan Pérez', goals: 20 }]),
+  makeTeam('equipo-b', [{ name: 'Jugador Uno', goals: 400 }, { name: 'Cuatro Cinco', goals: 900 }]),
+  makeTeam('equipo-vacio', []),
+];
+
+function setup(target = 1000, rounds = 4) {
+  const room = new Room({ code: 'TEST', teams, options: { pickMs: 60_000, revealMs: 60_000 }, random: () => 0 });
+  const a = room.addPlayer('Ana').player;
+  const b = room.addPlayer('Beto').player;
+  assert.deepEqual(room.updateSettings(a.id, { rounds, target }), { ok: true });
+  return { room, a, b };
+}
+
+test('validaciones de configuración', () => {
+  const { room, a, b } = setup();
+  assert.ok(room.updateSettings(a.id, { rounds: 3, target: 1000 }).error);
+  assert.ok(room.updateSettings(a.id, { rounds: 9, target: 1000 }).error);
+  assert.ok(room.updateSettings(b.id, { rounds: 5, target: 1000 }).error, 'solo el anfitrión');
+  room.destroy();
+});
+
+test('ronda: resta goles, bloquea duplicados y no encontrados suman 0', () => {
+  const { room, a, b } = setup();
+  room.start(a.id);
+  assert.equal(room.team.id, 'equipo-a', 'nunca sortea equipos sin datos');
+  assert.equal(room.submit(a.id, 'jugador uno').status, 'found');
+  const dup = room.submit(b.id, 'Jugador Uno');
+  assert.equal(dup.status, 'taken');
+  assert.equal(dup.retry, true);
+  assert.equal(room.submit(b.id, 'Pelé').status, 'notfound');
+  // Todos eligieron: la ronda termina sola.
+  assert.equal(room.phase, 'reveal');
+  assert.equal(room.players.get(a.id).remaining, 700);
+  assert.equal(room.players.get(b.id).remaining, 1000);
+  room.destroy();
+});
+
+test('ambiguo permite reintentar', () => {
+  const { room, a } = setup();
+  room.start(a.id);
+  const r = room.submit(a.id, 'perez');
+  assert.equal(r.status, 'ambiguous');
+  assert.equal(r.retry, true);
+  assert.equal(room.submit(a.id, 'juan perez').status, 'found');
+  assert.equal(room.players.get(a.id).remaining, 1000, 'se resta recién al cerrar la ronda');
+  room.destroy();
+});
+
+test('llegar o pasarse de 0 gana', () => {
+  const { room, a, b } = setup(250);
+  room.start(a.id);
+  room.submit(a.id, 'Jugador Uno'); // 300 > 250 => gana igual
+  room.submit(b.id, 'Otro Tres');
+  assert.equal(room.phase, 'finished');
+  assert.deepEqual(room.winners, [a.id]);
+  room.destroy();
+});
+
+test('sin respuesta al terminar el tiempo suma 0 y al final gana el más cercano', () => {
+  const { room, a, b } = setup(5000, 4);
+  room.start(a.id);
+  for (let i = 0; i < 4; i++) {
+    if (room.team.id === 'equipo-a' && i === 0) room.submit(a.id, 'Jugador Dos');
+    room.endRound(); // simula fin del tiempo
+    if (room.phase === 'reveal') room.nextRound();
+  }
+  assert.equal(room.phase, 'finished');
+  assert.equal(room.players.get(b.id).remaining, 5000);
+  assert.deepEqual(room.winners, [a.id]);
+  room.destroy();
+});
+
+test('no deja empezar sin datos', () => {
+  const room = new Room({ code: 'X', teams: [makeTeam('vacio', [])] });
+  const a = room.addPlayer('Ana').player;
+  assert.ok(room.start(a.id).error);
+});
+
+test('las elecciones ajenas no se ven durante la ronda', () => {
+  const { room, a, b } = setup();
+  room.start(a.id);
+  room.submit(a.id, 'Jugador Uno');
+  const sb = room.publicState(b.id);
+  assert.equal(sb.myPick, null);
+  assert.equal(sb.players.find((p) => p.id === a.id).picked, true);
+  assert.equal(JSON.stringify(sb).includes('Jugador Uno'), false);
+  room.destroy();
+});
