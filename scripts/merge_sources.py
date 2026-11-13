@@ -9,7 +9,7 @@ Cada jugador queda con:
     validacion = coinciden | difieren | una_fuente
     detalle    = goles según cada fuente (ej: "wikipedia=69; rsssf_selecciones=58")
 
-    python3 scripts/merge_sources.py
+    python3 scripts/merge_sources.py [-v] [--only=wikipedia,rsssf_selecciones]
 """
 import csv
 import re
@@ -77,7 +77,51 @@ class Player:
         return [set(tokens(n)) for n in self.names() if tokens(n)]
 
 
-def find_match(players, name, aliases, source=None):
+NICK = [
+    ('robert', 'bobby', 'bob', 'rob'), ('james', 'jimmy', 'jim'), ('nathaniel', 'nat'), ('stephen', 'steve', 'steven'),
+    ('geoffrey', 'geoff'), ('ronald', 'ron', 'ronnie'), ('william', 'bill', 'billy', 'willie'), ('john', 'jack', 'johnny'),
+    ('henry', 'harry'), ('edward', 'ted', 'eddie', 'ed'), ('thomas', 'tom', 'tommy'), ('richard', 'dick'),
+    ('luigi', 'gigi'), ('alessandro', 'sandro'), ('josep', 'pep'), ('jose', 'pepe'), ('ignacio', 'nacho'), ('daniel', 'dani'),
+    ('santiago', 'santi'), ('joseph', 'jef', 'jos', 'joe'), ('leopold', 'pol'), ('vincenzo', 'enzo'), ('maximiliano', 'maxi'),
+    ('francisco', 'paco', 'pancho', 'fran'), ('johannes', 'hannes', 'hans'), ('alexander', 'alex', 'sasha'), ('gustavo', 'gus'),
+    ('jerrel', 'jimmy'), ('michael', 'mike', 'mick'), ('anthony', 'tony'), ('frederick', 'fred', 'freddie'),
+]
+NICK_MAP = {}
+for group in NICK:
+    for n in group:
+        NICK_MAP.setdefault(phon(n), set()).update(phon(x) for x in group)
+
+
+def first_compatible(a, b):
+    if not a or not b:
+        return False
+    if a.startswith(b) or b.startswith(a) or (min(len(a), len(b)) >= 4 and lev(a, b) <= 1):
+        return True
+    return b in NICK_MAP.get(a, ())
+
+
+def surname_match(players, name, goals):
+    """Último recurso: mismo apellido y nombre de pila compatible (apodo, abreviatura) o mismos goles."""
+    tk = tokens(name)
+    if not tk:
+        return None
+    cands = []
+    for p in players:
+        for n in p.names():
+            pt = tokens(n)
+            if not pt or pt[-1] != tk[-1]:
+                continue
+            same_goals = goals is not None and goals > 0 and goals in p.values.values()
+            single = len(pt) == 1 or len(tk) == 1
+            if (len(pt) > 1 and len(tk) > 1 and first_compatible(pt[0], tk[0])) or (single and same_goals) \
+                    or (same_goals and pt[0][:1] == tk[0][:1]):
+                cands.append(p)
+                break
+    cands = list(dict.fromkeys(cands))
+    return cands[0] if len(cands) == 1 else None
+
+
+def find_match(players, name, aliases, source=None, goals=None):
     """Busca el jugador ya cargado que corresponde a (name, aliases). Devuelve (player | None, motivo).
     Dentro de una misma fuente solo se combina con el mismo nombre exacto (son personas distintas)."""
     same = [p for p in players if p.name == name and source in p.values]
@@ -115,11 +159,17 @@ def find_match(players, name, aliases, source=None):
             return fuzzy[0], 'fuzzy'
         if len(fuzzy) > 1:
             return None, 'ambiguo'
+    p = surname_match(players, name, goals)
+    if p:
+        return p, 'apellido'
     return None, 'nuevo'
 
 
 def load_sources():
     files = sorted(SRC_DIR.glob('*.csv'), key=lambda p: (p.stem != 'wikipedia', p.stem))
+    only = next((a.split('=', 1)[1].split(',') for a in sys.argv if a.startswith('--only=')), None)
+    if only:
+        files = [f for f in files if f.stem in only]
     out = []
     for f in files:
         with open(f, encoding='utf-8') as fh:
@@ -148,10 +198,12 @@ def main():
                 continue
             aliases = [a.strip() for a in (r.get('alias') or '').split('|') if a.strip()]
             players = teams.setdefault(tid, [])
-            p, how = find_match(players, name, aliases, source)
+            p, how = find_match(players, name, aliases, source, goals)
             if how == 'ambiguo':
                 log[tid].append(f'{source}: "{name}" coincide con más de un jugador; no se combinó')
                 continue
+            if how in ('apellido', 'fuzzy', 'tokens') and p is not None:
+                log[tid].append(f'{source}: "{name}" ({goals}) combinado con "{p.name}" {p.values} por {how}')
             if p is None:
                 p = Player(name, aliases)
                 players.append(p)
